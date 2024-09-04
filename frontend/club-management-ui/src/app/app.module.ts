@@ -7,12 +7,12 @@ import { NavPanelComponent } from './nav-panel/nav-panel.component';
 @NgModule({
     declarations: [
         AppComponent, // Declare the component here
-        NavPanelComponent
         // Other components
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule // Include routing module
+        AppRoutingModule, // Include routing module
+        NavPanelComponent
         // Other modules
     ],
     providers: [],
