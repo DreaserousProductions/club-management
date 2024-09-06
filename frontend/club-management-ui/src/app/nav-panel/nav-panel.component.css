@@ -46,12 +46,13 @@ div {
 }
 
 .buttons .text-button:hover {
-    background-color: var(--trn-teal);
+    color: var(--main-red);
 }
 
 .buttons .flat-button {
     color: var(--main-red);
     background-color: var(--main-beige);
+    font-weight: 900;
     border-radius: 6px;
 }
 
