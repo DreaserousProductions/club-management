@@ -111,7 +111,7 @@ div {
     -webkit-backface-visibility: hidden;
 }
 
-.csstransforms .cn-wrapper {
+.cn-wrapper {
     position: absolute;
     top: 100%;
     left: 50%;
@@ -135,7 +135,7 @@ div {
 }
 
 /*cover to prevent extra space of anchors from being clickable*/
-.csstransforms .cn-wrapper:after {
+.cn-wrapper:after {
     content: ".";
     display: block;
     font-size: 2em;
@@ -151,7 +151,7 @@ div {
     color: transparent;
 }
 
-.csstransforms .opened-nav {
+.opened-nav {
     border-radius: 50%;
     opacity: 1;
     -webkit-transition: all .3s ease;
@@ -164,7 +164,7 @@ div {
     pointer-events: auto;
 }
 
-.csstransforms .cn-wrapper li {
+.cn-wrapper li {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -187,7 +187,7 @@ div {
     pointer-events: none;
 }
 
-.csstransforms .cn-wrapper li a {
+.cn-wrapper li a {
     position: absolute;
     right: -7.25em;
     bottom: -7.25em;
@@ -213,7 +213,7 @@ div {
     pointer-events: auto;
 }
 
-.csstransforms .cn-wrapper li a span {
+.cn-wrapper li a span {
     position: relative;
     top: 1.8em;
     display: block;
@@ -222,68 +222,68 @@ div {
     text-transform: uppercase;
 }
 
-.csstransforms .cn-wrapper li a:hover,
-.csstransforms .cn-wrapper li a:active,
-.csstransforms .cn-wrapper li a:focus {
+.cn-wrapper li a:hover,
+.cn-wrapper li a:active,
+.cn-wrapper li a:focus {
     background: -webkit-radial-gradient(transparent 35%, #449e6a 35%);
     background: -moz-radial-gradient(transparent 35%, #449e6a 35%);
     background: radial-gradient(transparent 35%, #449e6a 35%);
 }
 
-.csstransforms .cn-wrapper li a:focus {
+.cn-wrapper li a:focus {
     position: fixed;
     /* fix the displacement bug in webkit browsers when using tab key */
 }
 
-.csstransforms .opened-nav li {
+.opened-nav li {
     -webkit-transition: all .3s ease .3s;
     -moz-transition: all .3s ease .3s;
     transition: all .3s ease .3s;
 }
 
-.csstransforms .opened-nav li:first-child {
+.opened-nav li:first-child {
     -webkit-transform: rotate(-20deg) skew(60deg);
     -moz-transform: rotate(-20deg) skew(60deg);
     -ms-transform: rotate(-20deg) skew(60deg);
     transform: rotate(-20deg) skew(60deg);
 }
 
-.csstransforms .opened-nav li:nth-child(2) {
+.opened-nav li:nth-child(2) {
     -webkit-transform: rotate(12deg) skew(60deg);
     -moz-transform: rotate(12deg) skew(60deg);
     -ms-transform: rotate(12deg) skew(60deg);
     transform: rotate(12deg) skew(60deg);
 }
 
-.csstransforms .opened-nav li:nth-child(3) {
+.opened-nav li:nth-child(3) {
     -webkit-transform: rotate(44deg) skew(60deg);
     -moz-transform: rotate(44deg) skew(60deg);
     -ms-transform: rotate(44deg) skew(60deg);
     transform: rotate(44deg) skew(60deg);
 }
 
-.csstransforms .opened-nav li:nth-child(4) {
+.opened-nav li:nth-child(4) {
     -webkit-transform: rotate(76deg) skew(60deg);
     -moz-transform: rotate(76deg) skew(60deg);
     -ms-transform: rotate(76deg) skew(60deg);
     transform: rotate(76deg) skew(60deg);
 }
 
-.csstransforms .opened-nav li:nth-child(5) {
+.opened-nav li:nth-child(5) {
     -webkit-transform: rotate(108deg) skew(60deg);
     -moz-transform: rotate(108deg) skew(60deg);
     -ms-transform: rotate(108deg) skew(60deg);
     transform: rotate(108deg) skew(60deg);
 }
 
-.csstransforms .opened-nav li:nth-child(6) {
+.opened-nav li:nth-child(6) {
     -webkit-transform: rotate(140deg) skew(60deg);
     -moz-transform: rotate(140deg) skew(60deg);
     -ms-transform: rotate(140deg) skew(60deg);
     transform: rotate(140deg) skew(60deg);
 }
 
-.csstransforms .opened-nav li:nth-child(7) {
+.opened-nav li:nth-child(7) {
     -webkit-transform: rotate(172deg) skew(60deg);
     -moz-transform: rotate(172deg) skew(60deg);
     -ms-transform: rotate(172deg) skew(60deg);
@@ -356,7 +356,7 @@ div {
 }
 
 @media only screen and (max-width: 480px) {
-    .csstransforms .cn-wrapper {
+    .cn-wrapper {
         font-size: .68em;
     }
 
