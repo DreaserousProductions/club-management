@@ -12,7 +12,7 @@ import { NavPanelComponent } from './nav-panel/nav-panel.component';
 export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit() {
-    this.loadExternalScript('assets/js/CircularMenu.js').then(() => {
+    this.loadExternalScript('assets/js/circularMenu.js').then(() => {
       console.log('Script loaded successfully.');
     }).catch(() => {
       console.log('Script loading failed.');
