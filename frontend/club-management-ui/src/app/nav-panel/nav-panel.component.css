@@ -1,0 +1,13 @@
+nav {
+    width: 100%;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    align-items: center;
+}
+
+div {
+    color: aliceblue;
+}
