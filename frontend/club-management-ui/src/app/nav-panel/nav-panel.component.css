@@ -142,9 +142,9 @@ div {
     width: 6.2em;
     height: 6.2em;
     position: absolute;
-    left: 50%;
+    /* left: 50%; */
     margin-left: -3.1em;
-    top: 50%;
+    /* top: 50%; */
     margin-top: -3.1em;
     border-radius: 50%;
     z-index: 10;
@@ -166,8 +166,8 @@ div {
 
 .cn-wrapper li {
     position: absolute;
-    top: -50%;
-    left: 100%;
+    top: 50%;
+    left: 50%;
     overflow: hidden;
     margin-top: -1.3em;
     margin-left: -10em;
