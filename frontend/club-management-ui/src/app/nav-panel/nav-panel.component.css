@@ -6,8 +6,6 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    position: relative;
-
     padding: 4px 20px 4px 20px;
 
     border-bottom: 1px solid var(--trn-dark-beige);
@@ -168,8 +166,8 @@ div {
 
 .cn-wrapper li {
     position: absolute;
-    /* top: 50%;
-    left: 50%; */
+    top: -50%;
+    left: 100%;
     overflow: hidden;
     margin-top: -1.3em;
     margin-left: -10em;
