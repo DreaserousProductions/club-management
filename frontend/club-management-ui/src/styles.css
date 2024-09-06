@@ -23,3 +23,8 @@
 body {
     background-color: var(--dark-shade);
 }
+
+/* Utilities */
+[data_text]::after {
+    content: attr(data_text);
+}
