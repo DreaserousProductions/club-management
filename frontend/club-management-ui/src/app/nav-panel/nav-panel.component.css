@@ -37,7 +37,7 @@ div {
     background: none;
 
     padding: 5px 15px 5px 15px;
-    transition: background-color .3s;
+    transition: background-color .3s, color .3s;
 }
 
 .buttons .text-button {
@@ -52,10 +52,10 @@ div {
 .buttons .flat-button {
     color: var(--main-red);
     background-color: var(--main-beige);
-    font-weight: 900;
     border-radius: 6px;
 }
 
 .buttons .flat-button:hover {
     background-color: var(--trn-purple);
+    font-weight: 700;
 }
