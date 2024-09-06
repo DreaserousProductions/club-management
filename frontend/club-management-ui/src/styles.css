@@ -19,3 +19,7 @@
     --trn-dark-shade: #0b0b0baa;
     --trn-light-shade: #efefef88;
 }
+
+body {
+    background-color: var(--dark-shade);
+}
