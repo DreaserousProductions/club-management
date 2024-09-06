@@ -92,8 +92,8 @@ div {
 
 .cn-button {
     position: absolute;
-    /* top: 100%;
-    left: 50%; */
+    top: 100%;
+    left: 50%;
     z-index: 11;
     margin-top: -2.25em;
     margin-left: -2.25em;
@@ -168,8 +168,8 @@ div {
 
 .cn-wrapper li {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    /* top: 50%;
+    left: 50%; */
     overflow: hidden;
     margin-top: -1.3em;
     margin-left: -10em;
