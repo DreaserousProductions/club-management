@@ -18,25 +18,23 @@ div {
 
 .nav-logo .logo {
     max-width: 50px;
+    margin-right: 20px;
 }
 
 .nav-logo .brand {
     font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
-    color: var(--main-teal);
+    font-weight: 900;
 }
 
 .buttons {
-    padding: 10px 4px 10px 4px;
+    padding: 30px 15px 30px 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-}
-
-.buttons .text-button {
-    color: var(--main-teal);
 }
 
 .buttons .flat-button {
     color: var(--main-red);
     background-color: var(--main-beige);
+    border-radius: 10px;
 }
