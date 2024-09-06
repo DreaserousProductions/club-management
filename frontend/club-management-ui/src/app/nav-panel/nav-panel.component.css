@@ -16,7 +16,7 @@ div {
     justify-content: space-between;
 }
 
-.nav-logo .logo {
+.nav-logo .logo img {
     max-width: 50px;
     margin-right: 20px;
 }
