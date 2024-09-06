@@ -6,6 +6,8 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+    position: relative;
+
     padding: 4px 20px 4px 20px;
 
     border-bottom: 1px solid var(--trn-dark-beige);
