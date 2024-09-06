@@ -36,7 +36,7 @@ div {
     border: none;
     background: none;
 
-    padding: 10px 5px 10px 5px;
+    padding: 5px 15px 5px 15px;
 }
 
 .buttons .text-button {
@@ -44,8 +44,16 @@ div {
     color: var(--main-beige);
 }
 
+.buttons .text-button:hover {
+    background-color: var(--trn-teal);
+}
+
 .buttons .flat-button {
     color: var(--main-red);
     background-color: var(--main-beige);
-    border-radius: 10px;
+    border-radius: 6px;
+}
+
+.buttons .flat-button:hover {
+    background-color: var(trn-purple);
 }

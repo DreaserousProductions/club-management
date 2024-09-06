@@ -7,6 +7,15 @@
     --main-teal: #6f949e;
     --main-orange: #da7659;
 
-    --dark-shade: #1b1b1b;
-    --light-shade: #efefdf;
+    --dark-shade: #0b0b0b;
+    --light-shade: #efefef;
+
+    --trn-purple: #5a3b6b88;
+    --trn-red: #af456288;
+    --trn-beige: #e4cca788;
+    --trn-teal: #6f949e88;
+    --trn-orange: #da765988;
+
+    --trn-dark-shade: #0b0b0b88;
+    --trn-light-shade: #efefef88;
 }
