@@ -18,17 +18,18 @@ div {
 
 .nav-logo .logo img {
     max-width: 50px;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 .nav-logo .brand {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Archivo Black';
     font-size: 24px;
+    letter-spacing: -2px;
     font-weight: 900;
 }
 
 .buttons {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inconsolata';
     font-size: 16px;
 }
 
@@ -37,7 +38,7 @@ div {
     background: none;
 
     padding: 5px 15px 5px 15px;
-    transition: background-color .3s, color .3s;
+    transition: background-color .3s, color .3s, font-weight 0.3s;
 }
 
 .buttons .text-button {
