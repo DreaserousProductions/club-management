@@ -32,8 +32,8 @@ div {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
 
-    border: none;
-    background: none;
+    border: none !important;
+    background: none !important;
 }
 
 .buttons .text-button {
