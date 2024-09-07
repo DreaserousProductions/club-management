@@ -1,33 +1,48 @@
 <nav>
-    <div class="nav-logo">
-        <div class="logo">
-            <img src="/true_logo.png" alt="">
-        </div>
-        <div class="brand">
+    <div class="container-lg">
+        <div class="nav-brand-text">
             <span data_text="Mingle"></span>
         </div>
-    </div>
 
-    <div class="component">
-        <button class="cn-button" id="cn-button">Menu</button>
-        <div class="cn-wrapper" id="cn-wrapper">
-            <ul>
-                <li><a href="#"><span>About</span></a></li>
-                <li><a href="#"><span>Tutorials</span></a></li>
-                <li><a href="#"><span>Articles</span></a></li>
-                <li><a href="#"><span>Snippets</span></a></li>
-                <li><a href="#"><span>Plugins</span></a></li>
-                <li><a href="#"><span>Contact</span></a></li>
-                <li><a href="#"><span>Follow</span></a></li>
-            </ul>
+        <div class="nav-logo-container">
+            <div class="logo-bg">
+                <div class="border-bg"></div>
+                <div class="central-menu-buttons">
+                    <a href="#">
+                        <img src="./information-button.png" alt="" title="About Us">
+                    </a>
+                    <a href="#">
+                        <img src="./community.png" alt="" title="Clubs">
+                    </a>
+                    <a href="#">
+                        <img src="./contact-mail.png" alt="" title="Contact Us  ">
+                    </a>
+                </div>
+            </div>
+
+            <div class="logo">
+                <img src="./true_logo.png" alt="Logo">
+            </div>
         </div>
-        <!-- End of Nav Structure -->
-    </div>
 
-    <div class="buttons">
-        <button class="text-button">About Us</button>
-        <button class="text-button">Clubs</button>
-        <button class="text-button">Contact Us</button>
-        <button class="flat-button">Login</button>
+        <div class="nav-outline-buttons">
+            <button class="flat-button">Login</button>
+        </div>
     </div>
 </nav>
+
+<!-- <div class="sample">
+    About
+</div> -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const nav_logo = document.querySelector(".nav-logo-container .logo img");
+        const nav_bg = document.querySelector(".nav-logo-container .logo-bg");
+        nav_logo.addEventListener('click', () => {
+            nav_logo.classList.toggle("active");
+            nav_bg.classList.toggle("active");
+            nav_bg.classList.toggle("rotate");
+        });
+    });
+</script>
