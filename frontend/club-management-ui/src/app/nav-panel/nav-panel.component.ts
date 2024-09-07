@@ -1,5 +1,4 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { initNavPanel } from '../../assets/js/nav-panel.js'
 declare function initNavPanel(): void;
 
 @Component({
@@ -10,26 +9,7 @@ declare function initNavPanel(): void;
   styleUrl: './nav-panel.component.css'
 })
 export class NavPanelComponent implements AfterViewInit {
-
-  constructor() {
+  ngAfterViewInit(): void {
     initNavPanel();
-  }
-
-  ngAfterViewInit() {
-    this.loadExternalScript('assets/js/circularMenu.js').then(() => {
-      console.log('Script loaded successfully.');
-    }).catch(() => {
-      console.log('Script loading failed.');
-    });
-  }
-
-  loadExternalScript(scriptUrl: string): Promise<any> {
-    return new Promise((resolve, reject) => {
-      const scriptElement = document.createElement('script');
-      scriptElement.src = scriptUrl;
-      scriptElement.onload = resolve;
-      scriptElement.onerror = reject;
-      document.body.appendChild(scriptElement);
-    });
   }
 }
