@@ -4,7 +4,7 @@ declare function initNavPanel(): void;
 @Component({
   selector: 'app-nav-panel',
   standalone: true,
-  imports: [],
+  imports: ['../../assets/js/nav-panel.js'],
   templateUrl: './nav-panel.component.html',
   styleUrl: './nav-panel.component.css'
 })
