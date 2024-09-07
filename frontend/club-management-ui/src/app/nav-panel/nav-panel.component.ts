@@ -1,10 +1,11 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { initNavPanel } from '../../assets/js/nav-panel.js'
 declare function initNavPanel(): void;
 
 @Component({
   selector: 'app-nav-panel',
   standalone: true,
-  imports: ['../../assets/js/nav-panel.js'],
+  imports: [],
   templateUrl: './nav-panel.component.html',
   styleUrl: './nav-panel.component.css'
 })
