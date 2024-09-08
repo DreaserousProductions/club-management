@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class MUser extends Model
 {
     use HasFactory;
+
+    protected $table = 'm_users';
 }
