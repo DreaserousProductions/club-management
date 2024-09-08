@@ -30,9 +30,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/js/nav-panel.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -91,9 +89,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/js/nav-panel.js"
-            ]
+            "scripts": []
           }
         }
       }

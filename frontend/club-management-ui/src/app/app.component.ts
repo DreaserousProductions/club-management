@@ -5,11 +5,12 @@ import { ListClubsComponent } from './list-clubs/list-clubs.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { AdminPageComponent } from "./admin-page/admin-page.component";
+import { RegistrationFormComponent } from "./registration-form/registration-form.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavPanelComponent, ListClubsComponent, FooterComponent, LoginFormComponent, AdminPageComponent],
+  imports: [RouterOutlet, NavPanelComponent, ListClubsComponent, FooterComponent, LoginFormComponent, AdminPageComponent, RegistrationFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
