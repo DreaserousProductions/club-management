@@ -51,7 +51,7 @@ export class RegistrationFormComponent {
 
       console.log(registration_object);
 
-      this.http.post('http://3.238.163.203:8000/users', registration_object, {
+      this.http.post('http://localhost:8000/users', registration_object, {
         headers: {
           'Content-Type': 'application/json'
         }
