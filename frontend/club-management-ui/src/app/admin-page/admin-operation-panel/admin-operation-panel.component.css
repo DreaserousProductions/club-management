@@ -1,0 +1,52 @@
+.panel {
+    border-radius: 10px;
+    border: 1px solid var(--main-beige);
+
+    padding: 10px 0;
+
+    background-color: var(--trn-dark-shade);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
+.panel .panel-desc h1,
+.panel .panel-desc p {
+    font-family: "Inconsolata";
+    text-align: center;
+
+    padding: 0 10px;
+}
+
+.panel .panel-desc h1 {
+    font-size: 24px;
+    color: var(--main-red);
+}
+
+.panel .panel-desc p {
+    color: var(--trn-beige);
+}
+
+.panel .grid-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.panel .grid-panel .element {
+    pointer-events: all;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+    color: var(--main-beige);
+    border: 1px solid var(--trn-beige);
+
+    transition: box-shadow .3s, backgournd-color .3s;
+}
+
+.panel .grid-panel .element:hover {
+    background-color: var(--dark-shade);
+    box-shadow: inset 0px 5px 10px var(--trn-beige);
+}

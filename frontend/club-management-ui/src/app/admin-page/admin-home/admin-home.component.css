@@ -1,0 +1,82 @@
+.main-div {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+
+    pointer-events: none;
+}
+
+.main-div .title h1 {
+    font-family: "Inconsolata";
+    color: var(--main-beige);
+}
+
+.main-div .title h1 span {
+    font-family: "Archivo Black";
+}
+
+.main-div .title h1 span:nth-child(2) {
+    color: var(--main-red);
+}
+
+.main-div .title h1 span:nth-child(4) {
+    color: var(--main-teal);
+}
+
+.operations-sec {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+app-admin-operation-panel {
+    width: 60%;
+}
+
+.main-div .list {
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid var(--main-beige);
+
+    padding: 10px 0;
+
+    background-color: var(--trn-dark-shade);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-div .list .top-sec {
+    max-width: 95%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-div .list .list-desc h1,
+.main-div .list .list-desc p {
+    font-family: "Inconsolata";
+    text-align: center;
+
+    padding: 0 10px;
+}
+
+.main-div .list .list-desc h1 {
+    font-size: 24px;
+    color: var(--main-teal);
+}
+
+.main-div .list .list-desc p {
+    color: var(--trn-beige);
+}
+
+.main-div .list .avatar img {
+    max-width: 80px;
+}

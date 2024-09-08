@@ -1,0 +1,23 @@
+.general-panel {
+    padding-top: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+app-admin-operation-panel {
+    width: 100%;
+}
+
+.clubs {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.clubs .title {
+    font-family: "Archivo Black";
+    color: var(--main-beige);
+
+    line-height: 19px;
+}

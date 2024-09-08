@@ -5,20 +5,6 @@
     font-weight: 900;
 }
 
-.nav-brand-text span:nth-child(2) {
-    color: var(--main-red);
-}
-
-.nav-brand-text span:nth-child(4) {
-    color: var(--main-teal);
-}
-
-.nav-logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .nav-logo-container .logo img {
     max-width: 50px;
     cursor: pointer;
@@ -32,8 +18,10 @@
 
 .nav-logo-container .logo-bg {
     border: 45px solid transparent;
+    /* border: 45px solid var(--main-purple); */
+    /* border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1; */
     background: linear-gradient(to top, var(--dark-shade), var(--dark-shade)) padding-box,
-        linear-gradient(to top, var(--main-purple), var(--main-beige), var(--trn-red)) border-box;
+        linear-gradient(to top, var(--trn-purple), var(--trn-beige), var(--trn-red)) border-box;
 
     border-radius: 50%;
     width: 500px;
@@ -45,10 +33,6 @@
 
     opacity: 0;
     transition: opacity .3s, box-shadow .3s, transform .3s;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .nav-logo-container .logo-bg .border-bg {
@@ -74,11 +58,7 @@
 
 .nav-logo-container .logo-bg .central-menu-buttons {
     left: 50%;
-    transform: translateX(-50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    transform: translateX(-50%)
 }
 
 .nav-logo-container .logo-bg .central-menu-buttons img {
@@ -98,4 +78,29 @@
 
 .nav-logo-container .logo-bg .central-menu-buttons a:nth-child(3) img {
     transform: translateX(107px) translateY(180px);
+}
+
+.nav-outline-buttons .flat-button {
+    border: 1px solid var(--main-teal);
+    background: none;
+
+    color: var(--main-red);
+    background-color: var(--main-beige);
+    box-shadow: inset -1px 1px 5px #d7a966;
+
+    padding: 2px 15px 2px 15px;
+    border-radius: 6px;
+
+    font-family: 'Inconsolata';
+    font-size: 18px;
+    font-weight: 900;
+
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+
+.nav-outline-buttons .flat-button:hover {
+    background-color: var(--trn-purple);
+    color: #f05f85;
+    box-shadow: inset -1px 1px 5px #ac6cce, 0 0 10px var(--trn-teal);
 }

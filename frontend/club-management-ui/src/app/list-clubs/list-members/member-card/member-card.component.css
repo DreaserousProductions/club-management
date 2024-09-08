@@ -1,0 +1,45 @@
+.card-element {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--main-beige);
+
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-element:hover {
+    background-color: var(--trn-teal);
+}
+
+.avatar {
+    border-radius: 50%;
+    max-width: 80px;
+
+    margin: 0 25px 0 50px;
+}
+
+.avatar img {
+    max-width: 80px;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    margin: 10px 50px 10px 25px;
+}
+
+.desc h2,
+.desc p {
+    color: var(--trn-beige);
+}
+
+.card-element:hover .desc h2,
+.card-element:hover .desc p {
+    color: var(--main-beige);
+}

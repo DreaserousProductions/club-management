@@ -1,0 +1,23 @@
+.title-card {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-card .page-title {
+    padding: 20px 0 0;
+
+    font-family: "Archivo Black";
+    font-size: 50px;
+    color: var(--main-beige);
+}
+
+.title-card .page-text {
+    max-width: 1200px;
+    text-align: justify;
+
+    font-family: "Inconsolata";
+    color: var(--main-beige);
+}

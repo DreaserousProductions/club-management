@@ -31,11 +31,8 @@
     --trn-dark-beige: #e4cca744;
 }
 
-html,
 body {
     background-color: var(--dark-shade);
-    height: 100%;
-    width: 100%;
 }
 
 /* Utilities */
@@ -50,10 +47,20 @@ nav {
     backdrop-filter: blur(80px);
 
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     border-bottom: 1px solid var(--trn-dark-beige);
 
     z-index: 9999;
+}
+
+div {
+    color: var(--main-beige);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 a {
@@ -61,10 +68,11 @@ a {
 }
 
 .container-lg {
+    width: 1100px;
+    max-width: 1100px;
     padding: 0 20px 0 20px;
 
-    color: var(--main-beige);
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }

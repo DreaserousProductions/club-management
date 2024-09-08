@@ -1,0 +1,25 @@
+button {
+    border: 1px solid var(--main-teal);
+    background: none;
+
+    color: var(--main-teal);
+    background-color: var(--main-beige);
+    box-shadow: inset -1px 1px 5px #d7a966;
+    text-shadow: 1px 1px 1px #12191b;
+
+    padding: 2px 15px 2px 15px;
+    border-radius: 6px;
+
+    font-family: 'Inconsolata';
+    font-size: 18px;
+    font-weight: 900;
+
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+
+button:hover {
+    background-color: var(--trn-purple);
+    color: #f05f85;
+    box-shadow: inset -1px 1px 5px #ac6cce, 0 0 10px var(--main-purple);
+}

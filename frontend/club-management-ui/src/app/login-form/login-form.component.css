@@ -1,0 +1,78 @@
+.login-form {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-element {
+    max-height: 60%;
+    max-width: 25%;
+
+    border-radius: 10px;
+    border: 1px solid var(--trn-beige);
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.form-element .title {
+    text-align: center;
+    font-family: "Archivo Black";
+    color: var(--main-beige);
+
+    border-bottom: 1px solid var(--main-teal);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px -6px var(--main-teal);
+
+    padding-bottom: 4px;
+
+    animation: oscillate 4s linear infinite;
+}
+
+.form-element label {
+    margin-top: 10px;
+
+    color: var(--main-beige);
+    font-family: 'Inconsolata';
+}
+
+.form-element input[type=text],
+.form-element input[type=password] {
+    width: 100%;
+    padding: 4px 10px;
+    border: 1px solid var(--trn-teal);
+    border-radius: 10px;
+
+    background: none;
+    color: var(--main-teal);
+}
+
+.form-element .center-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+app-mingle-button {
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+}
+
+@keyframes oscillate {
+    0% {
+        box-shadow: 0px 4px 6px -6px var(--main-teal);
+    }
+
+    50% {
+        box-shadow: 0px 6px 6px -6px var(--main-teal);
+    }
+
+    100% {
+        box-shadow: 0px 4px 6px -6px var(--main-teal);
+    }
+}

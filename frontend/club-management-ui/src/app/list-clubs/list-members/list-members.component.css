@@ -1,0 +1,13 @@
+.member-list {
+    width: 100%;
+}
+
+.title {
+    color: var(--main-beige);
+    font-family: "Archivo Black";
+    text-align: left;
+}
+
+app-member-card {
+    margin-bottom: 20px;
+}

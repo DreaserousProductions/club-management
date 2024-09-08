@@ -1,0 +1,33 @@
+.club-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 20px;
+    max-width: 1200px;
+
+    padding: 20px 0;
+    border: 1px solid var(--trn-beige);
+    border-radius: 10px;
+}
+
+.club-item:hover {
+    background-color: var(--trn-teal);
+}
+
+.club-img {
+    width: 210px;
+    height: 280px;
+
+    border-radius: 10px;
+}
+
+.club-details {
+    max-width: 60%;
+    color: var(--trn-beige);
+}
+
+.club-item:hover .club-details {
+    color: var(--main-beige);
+}

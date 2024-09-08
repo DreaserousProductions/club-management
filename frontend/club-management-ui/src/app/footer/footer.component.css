@@ -1,0 +1,19 @@
+.footer {
+    width: 100%;
+
+    background-color: var(--trn-dark-shade);
+    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px);
+
+    border-top: 1px solid var(--trn-dark-beige);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright {
+    font-size: 10px;
+    color: var(--trn-beige);
+    letter-spacing: 2px;
+}
