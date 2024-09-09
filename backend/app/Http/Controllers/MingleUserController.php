@@ -26,6 +26,8 @@ class MingleUserController extends Controller
 
         // Generate a random 6-digit OTP
         $otp = Str::random(6);
+        
+        Log::info('Data:', ['OTP' => $otp,  $rollNumber]);
 
         // Store the roll number and OTP in the mingle_users table
         $user = MingleUser::updateOrCreate(
