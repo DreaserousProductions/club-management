@@ -11,8 +11,8 @@ class MUserController extends Controller
 {
     public function index()
     {
-        Log::info('Request Data:', ['request' => $request->all()]);
         $users = MUser::all();
+        Log::info('Request Data:', ['User' => $users]);
         return response()->json($users);
     }
     public function store(Request $request)
