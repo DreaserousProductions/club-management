@@ -55,8 +55,8 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 410px;
-    height: 410px;
+    width: 411px;
+    height: 411px;
 
     background-color: #00000000;
     border-radius: 50%;
@@ -89,13 +89,13 @@
 
 /* Menu Buttons */
 .nav-logo-container .logo-bg .central-menu-buttons a:nth-child(1) img {
-    transform: translateX(-107px) translateY(180px);
+    transform: translateX(-107px) translateY(177px);
 }
 
 .nav-logo-container .logo-bg .central-menu-buttons a:nth-child(2) img {
-    transform: translateY(229px);
+    transform: translateY(226px);
 }
 
 .nav-logo-container .logo-bg .central-menu-buttons a:nth-child(3) img {
-    transform: translateX(107px) translateY(180px);
+    transform: translateX(107px) translateY(177px);
 }

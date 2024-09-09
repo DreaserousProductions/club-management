@@ -1,10 +1,11 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { MingleButtonComponent } from "../elements/mingle-button/mingle-button.component";
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav-panel',
   standalone: true,
-  imports: [MingleButtonComponent],
+  imports: [RouterLink, RouterLinkActive, MingleButtonComponent],
   templateUrl: './nav-panel.component.html',
   styleUrl: './nav-panel.component.css'
 })

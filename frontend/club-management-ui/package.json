@@ -20,6 +20,7 @@
     "@angular/router": "^18.2.0",
     "bootstrap": "^5.3.3",
     "club-management-ui": "file:",
+    "gsap": "^3.12.5",
     "ngx-bootstrap": "^18.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

@@ -1,0 +1,31 @@
+.main-div {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-elem {
+    color: var(--main-beige);
+    font-family: "Inconsolata";
+
+    font-size: 100px;
+}
+
+.main-elem #brand-text1,
+.main-elem #brand-text2,
+.main-elem #brand-text3,
+.main-elem #brand-text4,
+.main-elem #brand-text5,
+.main-elem #brand-text6 {
+    font-family: "Archivo Black";
+}
+
+#brand-text2 {
+    color: var(--main-red);
+}
+
+#brand-text4 {
+    color: var(--main-teal);
+}
