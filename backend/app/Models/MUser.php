@@ -9,5 +9,13 @@ class MUser extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'email',
+        'username',
+        'password',
+        'role',
+    ];
+    
     protected $table = 'm_users';
 }
