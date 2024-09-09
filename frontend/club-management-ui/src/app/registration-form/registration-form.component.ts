@@ -26,21 +26,24 @@ export class RegistrationFormComponent {
       if (regex.test(rollnumber)) {
         console.log("Ok");
 
-        this.http.post('/users', { roll: rollnumber }, {
+        fetch('/users', {
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json'
-          }
-        }).subscribe({
-          next: (response) => {
-            console.log("Registration successful:", response);
           },
-          error: (err) => {
-            console.error("Error during registration:", err);
-          },
-          complete: () => {
-            console.log("Request complete");
-          }
-        });
+          body: JSON.stringify({ roll: rollnumber })
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log("Registration successful:", data);
+            alert('OTP has been sent to your email.');
+          })
+          .catch(error => {
+            console.error("Error during registration:", error);
+            alert('An error occurred while sending the OTP.');
+          });
+      } else {
+        alert('Invalid roll number format.');
       }
     });
 
