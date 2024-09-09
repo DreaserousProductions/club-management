@@ -17,5 +17,5 @@ class MingleUser extends Model
         'role',
     ];
     
-    protected $table = 'm_users';
+    protected $table = 'mingle_users';
 }
