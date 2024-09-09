@@ -10,11 +10,13 @@ class MingleUser extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'email',
-        'username',
-        'password',
+        'rollnumber',
         'role',
+        'otp',
+        'name',
+        'avatar_img_path',
+        'clubs_enrolled_in',
+        'club_admin'
     ];
     
     protected $table = 'mingle_users';

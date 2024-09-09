@@ -32,8 +32,26 @@ class MingleUserController extends Controller
         // Store the roll number and OTP in the mingle_users table
         $user = MingleUser::updateOrCreate(
             ['rollnumber' => $rollNumber],  // Condition for finding the record
-            ['rollnumber' => $rollNumber, 'otp' => $otp] // Fields to be updated or created
+            ['otp' => $otp] // Fields to be updated or created
         );
+
+        // Check if the user exists by roll number
+        // $user = MingleUser::where('rollnumber', $rollNumber)->first();
+
+        // if ($user) {
+        //     // User exists, update the OTP
+        //     $user->otp = $otp;
+        //     $user->updated_at = now();  // Update the timestamp
+        //     $user->save();
+        // } else {
+        //     // User doesn't exist, create a new record
+        //     $user = MingleUser::create([
+        //         'rollnumber' => $rollNumber,
+        //         'otp' => $otp,
+        //         'created_at' => now(),
+        //         'updated_at' => now(),
+        //     ]);
+        // }
 
         // Send OTP via email
         $recipientEmail = $rollNumber . '@nitpy.ac.in';
