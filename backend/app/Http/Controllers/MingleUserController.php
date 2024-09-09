@@ -34,11 +34,12 @@ class MingleUserController extends Controller
         //     'password' => Hash::make($request->input('password')),
         // ]);
 
-        $user = MingleUser::create($request->all());
-        return response()->json($user, 201);
+        // $user = MingleUser::create($request->all());
+        // return response()->json($user, 201);
     }
     public function mail_otp(Request $request)
     {
+        Log::info('Request Data:', ['request' => $request->all()]);
         return response()->json($user, 200);
     }
 }
