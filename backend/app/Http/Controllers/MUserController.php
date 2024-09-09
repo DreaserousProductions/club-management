@@ -14,7 +14,9 @@ class MUserController extends Controller
     }
     public function store(Request $request)
     {
+        print("I got here");
         $user = MUser::create($request->all());
+        print("I got here");
         return response()->json($user, 201);
     }
 }
