@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class MingleUser extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'username',
+        'password',
+        'role',
+    ];
+    
+    protected $table = 'm_users';
 }
