@@ -13,13 +13,34 @@ import { HttpClient } from '@angular/common/http';
 export class RegistrationFormComponent {
   sendRollNumber() {
     let rollnumber = "";
-    const regex = /^[A-Za-z]{2}\d[BDM]\d{4}$/;
+    const regex = /^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/;
 
     const register_btn = document.querySelector('.form-element form app-mingle-button');
+    const rollnumber_input = document.querySelector('.form-element form #rollnumber-input') as HTMLInputElement;
 
-    register_btn?.addEventListener('click', () => {
+    register_btn?.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      rollnumber = rollnumber_input.value;
+
       if (regex.test(rollnumber)) {
         console.log("Ok");
+
+        this.http.post('/users', { roll: rollnumber }, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }).subscribe({
+          next: (response) => {
+            console.log("Registration successful:", response);
+          },
+          error: (err) => {
+            console.error("Error during registration:", err);
+          },
+          complete: () => {
+            console.log("Request complete");
+          }
+        });
       }
     });
 
