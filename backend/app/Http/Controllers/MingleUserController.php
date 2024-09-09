@@ -10,7 +10,7 @@ class MingleUserController extends Controller
     {
         // $users = MingleUser::all();
         // Log::info('Request Data:', ['User' => $users]);
-        // return response()->json($users);
+        return response()->string("Hello");
     }
     public function store(Request $request)
     {
