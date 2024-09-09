@@ -16,7 +16,7 @@ iframe {
     width: 200px;
     height: 80px;
 
-    background-color: var(--trn-dark-shade);
-    -webkit-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
+    /* background-color: var(--trn-dark-shade); */
+    -webkit-backdrop-filter: blur(1000px);
+    backdrop-filter: blur(1000px);
 }
