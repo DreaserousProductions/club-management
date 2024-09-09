@@ -34,9 +34,9 @@ class MUserController extends Controller
         // }
 
         // Hash the password
-        $request->merge([
-            'password' => Hash::make($request->input('password')),
-        ]);
+        // $request->merge([
+        //     'password' => Hash::make($request->input('password')),
+        // ]);
 
         $user = MUser::create($request->all());
         return response()->json($user, 201);
