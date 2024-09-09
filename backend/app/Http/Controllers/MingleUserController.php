@@ -41,6 +41,6 @@ class MingleUserController extends Controller
     public function mail_otp(Request $request)
     {
         Log::info('Request Data:', ['request' => $request->all()]);
-        return response()->json($user, 200);
+        return response()->json($request, 200);
     }
 }
