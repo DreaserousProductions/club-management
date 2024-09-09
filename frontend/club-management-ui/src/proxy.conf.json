@@ -1,0 +1,6 @@
+{
+    "/users": {
+        "target": "http://44.205.12.92:8000",
+        "secure": false
+    }
+}
