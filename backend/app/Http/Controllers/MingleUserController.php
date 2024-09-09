@@ -8,9 +8,9 @@ class MingleUserController extends Controller
 {
     public function index()
     {
-        $users = MingleUser::all();
-        Log::info('Request Data:', ['User' => $users]);
-        return response()->json($users);
+        // $users = MingleUser::all();
+        // Log::info('Request Data:', ['User' => $users]);
+        // return response()->json($users);
     }
     public function store(Request $request)
     {
@@ -36,5 +36,9 @@ class MingleUserController extends Controller
 
         $user = MingleUser::create($request->all());
         return response()->json($user, 201);
+    }
+    public function mail_otp(Request $request)
+    {
+        return response()->json($user, 200);
     }
 }
