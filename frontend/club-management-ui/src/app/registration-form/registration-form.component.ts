@@ -51,21 +51,21 @@ export class RegistrationFormComponent {
 
       console.log(registration_object);
 
-      this.http.post('/users', registration_object, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).subscribe({
-        next: (response) => {
-          console.log("Registration successful:", response);
-        },
-        error: (err) => {
-          console.error("Error during registration:", err);
-        },
-        complete: () => {
-          console.log("Request complete");
-        }
-      });
+      // this.http.post('/users', registration_object, {
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   }
+      // }).subscribe({
+      //   next: (response) => {
+      //     console.log("Registration successful:", response);
+      //   },
+      //   error: (err) => {
+      //     console.error("Error during registration:", err);
+      //   },
+      //   complete: () => {
+      //     console.log("Request complete");
+      //   }
+      // });
     });
   }
 
