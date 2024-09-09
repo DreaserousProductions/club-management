@@ -1,6 +1,8 @@
 {
     "/users": {
         "target": "http://44.205.12.92:8000/users",
-        "secure": false
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
     }
 }
