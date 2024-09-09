@@ -22,9 +22,7 @@ export class RegistrationFormComponent {
 
     const submit_btn = document.querySelector('.form-element form app-mingle-button');
 
-    submit_btn?.addEventListener('click', (e) => {
-      e.preventDefault();
-
+    submit_btn?.addEventListener('click', () => {
       const input_elements = document.querySelectorAll('.form-element form input');
 
       input_elements.forEach(input => {
