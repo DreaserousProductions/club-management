@@ -1,6 +1,6 @@
 {
     "/users": {
-        "target": "http://3.216.125.105:8000/api",
+        "target": "http://34.200.236.101:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
