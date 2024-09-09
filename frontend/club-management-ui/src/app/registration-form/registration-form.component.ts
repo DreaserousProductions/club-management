@@ -19,7 +19,7 @@ export class RegistrationFormComponent {
 
     register_btn?.addEventListener('click', () => {
       if (regex.test(rollnumber)) {
-
+        console.log("Ok");
       }
     });
 
