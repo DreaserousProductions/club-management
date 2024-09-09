@@ -31,8 +31,8 @@ class MingleUserController extends Controller
 
         // Store the roll number and OTP in the mingle_users table
         $user = MingleUser::updateOrCreate(
-            ['rollnumber' => $rollNumber],
-            ['otp' => $otp] // Update OTP if user already exists
+            ['rollnumber' => $rollNumber],  // Condition for finding the record
+            ['rollnumber' => $rollNumber, 'otp' => $otp] // Fields to be updated or created
         );
 
         // Send OTP via email
