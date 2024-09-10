@@ -11,3 +11,4 @@ Route::get('/user', function (Request $request) {
 // Route::get('/users', [MingleUserController::class, 'index']);
 Route::post('/otp/send', [MingleUserController::class, 'sendOtp']);
 Route::post('/otp/verify', [MingleUserController::class, 'verifyOtp']);
+Route::post('/user/create-password', [MingleUserController::class, 'createPassword']);

@@ -10,5 +10,11 @@
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
+    },
+    "/user/create-password": {
+        "target": "http://3.221.170.103:8000/api",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
     }
 }
