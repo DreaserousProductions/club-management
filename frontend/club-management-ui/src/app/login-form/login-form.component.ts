@@ -38,6 +38,7 @@ export class LoginFormComponent {
             server_message.innerHTML = error;
           },
           complete: () => { // complete handler
+            this.isButtonDisabled = false;
           }
         });
     } else {
