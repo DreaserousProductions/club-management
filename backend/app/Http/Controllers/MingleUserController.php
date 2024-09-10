@@ -113,7 +113,6 @@ class MingleUserController extends Controller
         ]);
 
         $rollNumber = strtolower($validated['roll']);
-        Log::info("smtg", ["smtg" => $rollNumber]);
         $password = $validated['password'];
 
         // Check if user exists with the given roll number
@@ -123,6 +122,7 @@ class MingleUserController extends Controller
             // Successful login
             return response()->json(['message' => 'Login successful', 'success' => true], 200);
         } else {
+            Log::info("smtg", ["smtg" => Hash::check($password, $user->password)]);
             // Invalid credentials
             return response()->json(['message' => 'Invalid roll number or password', 'success' => false], 400);
         }
