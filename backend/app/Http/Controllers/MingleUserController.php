@@ -21,7 +21,7 @@ class MingleUserController extends Controller
             'roll' => 'required|regex:/^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/'
         ]);
 
-        $rollNumber = $validated['roll'];
+        $rollNumber = strtolower($validated['roll']);
 
         $userIfExists = MingleUser::where('rollnumber', $rollNumber)->where('registered', 1)->first();
         if(!$userIfExists) {
@@ -57,7 +57,7 @@ class MingleUserController extends Controller
             'otp'  => 'required|string|size:6'
         ]);
 
-        $rollNumber = $validated['roll'];
+        $rollNumber = strtolower($validated['roll']);
         $otp = $validated['otp'];
 
         // Check if the roll number exists and OTP matches
@@ -85,7 +85,7 @@ class MingleUserController extends Controller
             'password' => 'required|string|min:8'
         ]);
 
-        $rollNumber = $validated['roll'];
+        $rollNumber = strtolower($validated['roll']);
         $password = $validated['password'];
 
         // Find the user by roll number
@@ -112,7 +112,7 @@ class MingleUserController extends Controller
             'password' => 'required|string|min:8'
         ]);
 
-        $rollNumber = $validated['roll'];
+        $rollNumber = strtolower($validated['roll']);
         $password = $validated['password'];
 
         // Check if user exists with the given roll number
