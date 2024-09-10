@@ -1,12 +1,12 @@
 {
-    "/registration": {
-        "target": "http://98.80.203.142:8000/api",
+    "/otp/send": {
+        "target": "http://3.221.170.103:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
-    "/verifyingRegistration": {
-        "target": "http://98.80.203.142:8000/api",
+    "/otp/verify": {
+        "target": "http://3.221.170.103:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"

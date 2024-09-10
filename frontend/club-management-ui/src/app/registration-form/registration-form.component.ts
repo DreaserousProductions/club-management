@@ -33,7 +33,7 @@ export class RegistrationFormComponent {
       if (regex.test(rollnumber)) {
         this.isButtonDisabled = true;  // Disable the button
 
-        fetch('/registration', {
+        fetch('/otp/send', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ export class RegistrationFormComponent {
         if (otp) {
           this.isButtonDisabled = true;  // Disable the button during OTP submission
 
-          fetch('/verifyingRegistration', {
+          fetch('/otp/verify', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
