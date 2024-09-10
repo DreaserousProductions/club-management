@@ -33,7 +33,7 @@ export class RegistrationFormComponent {
       if (regex.test(rollnumber)) {
         this.isButtonDisabled = true;  // Disable the button
 
-        fetch('/register', {
+        fetch('/registration', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
