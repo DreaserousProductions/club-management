@@ -42,11 +42,16 @@ export class RegistrationFormComponent {
         })
           .then(response => response.json())
           .then(data => {
-            server_message.innerHTML = "Please enter the OTP sent to your E-Mail";
-            first_phase_complete = true;
-            otp_label?.classList.remove("hidden");
-            otp_input?.classList.remove("hidden");
-            this.isButtonDisabled = false;  // Re-enable the button
+            if (data.success) {
+              server_message.innerHTML = "Please enter the OTP sent to your E-Mail";
+              first_phase_complete = true;
+              otp_label?.classList.remove("hidden");
+              otp_input?.classList.remove("hidden");
+              this.isButtonDisabled = false;  // Re-enable the button
+            } else {
+              server_message.innerHTML = data.message;
+              this.isButtonDisabled = false;  // Re-enable the button
+            }
           })
           .catch(error => {
             server_message.innerHTML = "Error during registration";
