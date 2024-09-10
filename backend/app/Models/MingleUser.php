@@ -13,6 +13,7 @@ class MingleUser extends Model
         'rollnumber',
         'role',
         'otp',
+        'registered',
         'name',
         'avatar_img_path',
         'clubs_enrolled_in',

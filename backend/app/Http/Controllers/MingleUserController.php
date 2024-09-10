@@ -30,6 +30,7 @@ class MingleUserController extends Controller
         if ($user && $user->otp === $otp) {
             // OTP is valid, delete it from the database to prevent reuse
             $user->otp = null;
+            $user->registered = 1;
             $user->save();
 
             // Respond with success
@@ -53,26 +54,32 @@ class MingleUserController extends Controller
 
         $rollNumber = $validated['roll'];
 
-        // Generate a random 6-digit OTP
-        $otp = Str::random(6);
-        
-        Log::info('Data:', ['OTP' => $otp,  $rollNumber]);
+        $userIfExists = MingleUser::where('rollnumber', $rollNumber)->first();
+        if(!$userIfExists) {
+            // Generate a random 6-digit OTP
+            $otp = Str::random(6);
+            
+            Log::info('Data:', ['OTP' => $otp,  $rollNumber]);
 
-        // Store the roll number and OTP in the mingle_users table
-        $user = MingleUser::updateOrCreate(
-            ['rollnumber' => $rollNumber],
-            ['otp' => $otp]
-        );
+            // Store the roll number and OTP in the mingle_users table
+            MingleUser::updateOrCreate(
+                ['rollnumber' => $rollNumber],
+                ['otp' => $otp]
+            );
+            
+            // Send OTP via email
+            $recipientEmail = $rollNumber . '@nitpy.ac.in';
+            
+            Mail::raw("Your OTP is: $otp", function ($message) use ($recipientEmail) {
+                $message->to($recipientEmail)
+                        ->subject('Your OTP');
+            });
 
-        // Send OTP via email
-        $recipientEmail = $rollNumber . '@nitpy.ac.in';
-        
-        Mail::raw("Your OTP is: $otp", function ($message) use ($recipientEmail) {
-            $message->to($recipientEmail)
-                    ->subject('Your OTP');
-        });
+            return response()->json(['message' => 'OTP sent successfully', 'success' => true], 200);
+        } else {
+            return response()->json(['message' => 'User already registered', 'success' => false], 200);
+        }
 
-        return response()->json(['message' => 'OTP sent successfully'], 200);
     }
 
     // public function mail_otp(Request $request)
