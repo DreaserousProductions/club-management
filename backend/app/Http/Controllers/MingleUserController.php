@@ -54,7 +54,7 @@ class MingleUserController extends Controller
 
         $rollNumber = $validated['roll'];
 
-        $userIfExists = MingleUser::where('rollnumber', $rollNumber)->first();
+        $userIfExists = MingleUser::where('rollnumber', $rollNumber)->where('registered', 1)->first();
         if(!$userIfExists) {
             // Generate a random 6-digit OTP
             $otp = Str::random(6);
