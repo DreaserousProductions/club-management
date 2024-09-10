@@ -13,10 +13,10 @@
             <div class="logo-bg">
                 <div class="border-bg"></div>
                 <div class="central-menu-buttons">
-                    <a routerLink="register" routerLinkActive="active">
+                    <a [routerLink]="firstButtonLink" routerLinkActive="active">
                         <img src="/information-button.png" alt="" title="About Us">
                     </a>
-                    <a href="/">
+                    <a routerLink="" routerLinkActive="active">
                         <img src="/home.png" alt="" title="Home">
                     </a>
                     <a href="#">
@@ -32,7 +32,9 @@
 
         <div class="nav-outline-buttons">
             <!-- <button class="flat-button">Login</button> -->
-            <app-mingle-button buttonText="Login"></app-mingle-button>
+            <a [routerLink]="mainButtonLink" routerLinkActive="active">
+                <app-mingle-button [buttonText]="mainButtonText"></app-mingle-button>
+            </a>
         </div>
     </div>
 </nav>

@@ -40,27 +40,25 @@ export class RegistrationFormComponent {
       this.rollnumber = rollnumber_input.value;
       if (regex.test(this.rollnumber)) {
         this.isButtonDisabled = true;
-        fetch('/otp/send', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ roll: this.rollnumber })
-        })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              server_message.innerHTML = "Please enter the OTP sent to your E-Mail";
-              this.current_phase = 2;
-              otp_label?.classList.remove("hidden");
-              otp_input?.classList.remove("hidden");
-              this.isButtonDisabled = false;
-            } else {
-              server_message.innerHTML = data.message;
+
+        this.http.post('/otp/send', { roll: this.rollnumber })
+          .subscribe({
+            next: (data: any) => {
+              if (data.success) {
+                server_message.innerHTML = "Please enter the OTP sent to your E-Mail";
+                this.current_phase = 2;
+                otp_label?.classList.remove("hidden");
+                otp_input?.classList.remove("hidden");
+                this.isButtonDisabled = false;
+              } else {
+                server_message.innerHTML = data.message;
+                this.isButtonDisabled = false;
+              }
+            },
+            error: () => {
+              server_message.innerHTML = "Error during registration";
               this.isButtonDisabled = false;
             }
-          })
-          .catch(() => {
-            server_message.innerHTML = "Error during registration";
-            this.isButtonDisabled = false;
           });
       } else {
         server_message.innerHTML = "Invalid Roll Number Format";
@@ -72,32 +70,30 @@ export class RegistrationFormComponent {
       const otp = otp_input.value;
       if (otp) {
         this.isButtonDisabled = true;
-        fetch('/otp/verify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ roll: this.rollnumber, otp: otp })
-        })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              server_message.innerHTML = "OTP verified successfully. Create your password.";
-              this.current_phase = 3;
-              otp_label?.classList.add("hidden");
-              otp_input?.classList.add("hidden");
-              pass_label?.classList.remove("hidden");
-              pass_input?.classList.remove("hidden");
-              cnf_pass_label?.classList.remove("hidden");
-              cnf_pass_input?.classList.remove("hidden");
-              this.isButtonDisabled = false;
-              this.formButtonText = "Register";
-            } else {
-              server_message.innerHTML = "Invalid OTP. Please try again.";
+
+        this.http.post('/otp/verify', { roll: this.rollnumber, otp: otp })
+          .subscribe({
+            next: (data: any) => {
+              if (data.success) {
+                server_message.innerHTML = "OTP verified successfully. Create your password.";
+                this.current_phase = 3;
+                otp_label?.classList.add("hidden");
+                otp_input?.classList.add("hidden");
+                pass_label?.classList.remove("hidden");
+                pass_input?.classList.remove("hidden");
+                cnf_pass_label?.classList.remove("hidden");
+                cnf_pass_input?.classList.remove("hidden");
+                this.isButtonDisabled = false;
+                this.formButtonText = "Register";
+              } else {
+                server_message.innerHTML = "Invalid OTP. Please try again.";
+                this.isButtonDisabled = false;
+              }
+            },
+            error: () => {
+              server_message.innerHTML = "Error during OTP verification";
               this.isButtonDisabled = false;
             }
-          })
-          .catch(() => {
-            server_message.innerHTML = "Error during OTP verification";
-            this.isButtonDisabled = false;
           });
       } else {
         server_message.innerHTML = "Please enter the OTP";
@@ -110,24 +106,23 @@ export class RegistrationFormComponent {
       const confirmPassword = cnf_pass_input.value;
       if (password && confirmPassword && password === confirmPassword) {
         this.isButtonDisabled = true;
-        fetch('/user/create-password', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ roll: this.rollnumber, password: password })
-        })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              server_message.innerHTML = "Password created successfully.";
-              this.current_phase = 4;
-            } else {
-              server_message.innerHTML = data.message;
+
+        this.http.post('/user/create-password', { roll: this.rollnumber, password: password })
+          .subscribe({
+            next: (data: any) => {
+              if (data.success) {
+                server_message.innerHTML = "Password created successfully.";
+                localStorage.setItem("mingle_registered", "positive");
+                this.current_phase = 4;
+              } else {
+                server_message.innerHTML = data.message;
+                this.isButtonDisabled = false;
+              }
+            },
+            error: () => {
+              server_message.innerHTML = "Error during password creation";
               this.isButtonDisabled = false;
             }
-          })
-          .catch(() => {
-            server_message.innerHTML = "Error during password creation";
-            this.isButtonDisabled = false;
           });
       } else {
         server_message.innerHTML = "Passwords do not match";

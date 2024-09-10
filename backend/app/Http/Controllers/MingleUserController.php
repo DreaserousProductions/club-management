@@ -102,4 +102,28 @@ class MingleUserController extends Controller
             return response()->json(['message' => 'Password already set or user not found'], 400);
         }
     }
+
+    // Login API function
+    public function login(Request $request)
+    {
+        // Validate the input
+        $validated = $request->validate([
+            'roll' => 'required|regex:/^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/',
+            'password' => 'required|string|min:8'
+        ]);
+
+        $rollNumber = $validated['roll'];
+        $password = $validated['password'];
+
+        // Check if user exists with the given roll number
+        $user = MingleUser::where('rollnumber', $rollNumber)->first();
+
+        if ($user && Hash::check($password, $user->password)) {
+            // Successful login
+            return response()->json(['message' => 'Login successful', 'success' => true], 200);
+        } else {
+            // Invalid credentials
+            return response()->json(['message' => 'Invalid roll number or password', 'success' => false], 400);
+        }
+    }
 }
