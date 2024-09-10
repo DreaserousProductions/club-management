@@ -113,6 +113,7 @@ class MingleUserController extends Controller
         ]);
 
         $rollNumber = strtolower($validated['roll']);
+        Log::info("smtg", [smtg => $rollNumber]);
         $password = $validated['password'];
 
         // Check if user exists with the given roll number
