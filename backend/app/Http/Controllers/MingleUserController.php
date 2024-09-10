@@ -15,9 +15,6 @@ class MingleUserController extends Controller
     // Sending OTP method (same as before)
     public function sendOtp(Request $request)
     {
-        // Log request data
-        Log::info('Request Data:', ['request' => $request->all()]);
-
         // Validate the roll number
         $validated = $request->validate([
             'roll' => 'required|regex:/^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/'
@@ -30,8 +27,6 @@ class MingleUserController extends Controller
             // Generate a random 6-digit OTP
             $otp = Str::random(6);
             
-            Log::info('Data:', ['OTP' => $otp,  $rollNumber]);
-
             // Store the roll number and OTP in the mingle_users table
             MingleUser::updateOrCreate(
                 ['rollnumber' => $rollNumber],
@@ -91,6 +86,8 @@ class MingleUserController extends Controller
 
         $rollNumber = $validated['roll'];
         $password = $validated['password'];
+
+        Log::info('Data:', ['Password' => $password,  $rollNumber]);
 
         // Find the user by roll number
         $user = MingleUser::where('rollnumber', $rollNumber)->first();
