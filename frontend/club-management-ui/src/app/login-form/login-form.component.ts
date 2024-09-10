@@ -15,8 +15,6 @@ export class LoginFormComponent {
   constructor(private http: HttpClient) { } // Inject HttpClient
 
   loginUser() {
-    console.log('clicke');
-
     const rollnumber_input = document.querySelector('#rollnumber-input') as HTMLInputElement;
     const password_input = document.querySelector('#pass-input') as HTMLInputElement;
     const server_message = document.querySelector('.form-element .message') as HTMLSpanElement;
@@ -32,10 +30,10 @@ export class LoginFormComponent {
       this.http.post('/user/login', { roll: rollnumber, password: password })
         .subscribe({
           next: (response: any) => { // success handler
-            server_message.innerHTML = response;
+            server_message.innerHTML = response.message;
           },
           error: (error: any) => { // error handler
-            server_message.innerHTML = error;
+            server_message.innerHTML = "Invalid rollnumber or password";
           },
           complete: () => { // complete handler
             this.isButtonDisabled = false;
