@@ -33,7 +33,7 @@ class MingleUserController extends Controller
             $user->save();
 
             // Respond with success
-            return response()->json(['message' => 'OTP verified successfully'], 200);
+            return response()->json(['message' => 'OTP verified successfully', 'success' => true], 200);
         } else {
             // Invalid OTP
             return response()->json(['message' => 'Invalid OTP'], 400);
