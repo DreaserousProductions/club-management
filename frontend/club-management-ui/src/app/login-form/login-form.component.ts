@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MingleButtonComponent } from "../elements/mingle-button/mingle-button.component";
 
 @Component({
@@ -9,5 +9,5 @@ import { MingleButtonComponent } from "../elements/mingle-button/mingle-button.c
   styleUrl: './login-form.component.css'
 })
 export class LoginFormComponent {
-
+  @Input() isButtonDisabled: boolean = false;
 }

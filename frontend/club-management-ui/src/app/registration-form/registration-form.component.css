@@ -71,6 +71,14 @@ app-mingle-button {
 .form-element .message {
     color: var(--main-red);
     text-align: center;
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.re-route {
+    margin: auto;
+    color: var(--main-teal);
     font-size: 12px;
 }
 

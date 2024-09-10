@@ -13,7 +13,7 @@ use App\Models\MingleUser;
 
 class MingleUserController extends Controller
 {
-    // Sending OTP method (same as before)
+    // Sending OTP method
     public function sendOtp(Request $request)
     {
         // Validate the roll number
@@ -48,7 +48,7 @@ class MingleUserController extends Controller
         }
     }
 
-    // Route to verify OTP
+    // Route to verify OTP (same as before)
     public function verifyOtp(Request $request)
     {
         // Validate the OTP and roll number

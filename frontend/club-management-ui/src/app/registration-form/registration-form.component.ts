@@ -1,17 +1,20 @@
 import { Component, Input } from '@angular/core';
 import { MingleButtonComponent } from "../elements/mingle-button/mingle-button.component";
 import { HttpClient } from '@angular/common/http';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-registration-form',
   standalone: true,
-  imports: [MingleButtonComponent],
+  imports: [RouterLink, RouterLinkActive, MingleButtonComponent],
   templateUrl: './registration-form.component.html',
   styleUrl: './registration-form.component.css'
 })
 
 export class RegistrationFormComponent {
   @Input() isButtonDisabled: boolean = false;
+  @Input() formButtonText: string = "Submit";
+
   rollnumber: string = "";
   current_phase: number = 1;
 
@@ -86,6 +89,7 @@ export class RegistrationFormComponent {
               cnf_pass_label?.classList.remove("hidden");
               cnf_pass_input?.classList.remove("hidden");
               this.isButtonDisabled = false;
+              this.formButtonText = "Register";
             } else {
               server_message.innerHTML = "Invalid OTP. Please try again.";
               this.isButtonDisabled = false;
