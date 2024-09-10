@@ -1,4 +1,4 @@
-import { Component, Input, AfterViewInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MingleButtonComponent } from "../elements/mingle-button/mingle-button.component";
 import { HttpClient } from '@angular/common/http';
 
@@ -42,14 +42,5 @@ export class LoginFormComponent {
     } else {
       server_message.innerHTML = "Please enter both Roll Number and Password.";
     }
-  }
-
-  ngAfterViewInit(): void {
-    const login_btn = document.querySelector("app-mingle-button");
-
-    login_btn?.addEventListener('click', (e) => {
-      e.preventDefault();
-      this.loginUser(); // Trigger login function when button is clicked
-    });
   }
 }

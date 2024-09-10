@@ -1,6 +1,6 @@
 <div class="login-form">
     <div class="form-element">
-        <form>
+        <form (ngSubmit)="loginUser()">
             <h1 class="title">Login</h1>
             <label for="rollnumber"><b>Roll Number</b></label>
             <input id="rollnumber-input" type="text" placeholder="CSXXB10YY" name="rollnumber" required>
