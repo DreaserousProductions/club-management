@@ -78,16 +78,16 @@ class MingleUserController extends Controller
     // Password creation route
     public function createPassword(Request $request)
     {
-        Log::info('madeIt');
+        Log::info('madeIt', ['data' => $request]);
 
         // Validate the password and roll number
         $validated = $request->validate([
-            'roll' => 'required|regex:/^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/',
-            'password' => 'required|string|min:8|confirmed'
+            'roll' => 'required|regex:/^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/'
+            // 'password' => 'required|string|min:8|confirmed'
         ]);
 
         $rollNumber = $validated['roll'];
-        $password = $validated['password'];
+        $password = $request['password'];
 
         Log::info('Data:', ['Password' => $password,  $rollNumber]);
 
