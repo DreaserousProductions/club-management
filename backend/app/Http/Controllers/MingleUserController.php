@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 use App\Models\MingleUser;
@@ -78,18 +79,14 @@ class MingleUserController extends Controller
     // Password creation route
     public function createPassword(Request $request)
     {
-        Log::info('madeIt', ['data' => $request]);
-
         // Validate the password and roll number
         $validated = $request->validate([
-            'roll' => 'required|regex:/^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/'
-            // 'password' => 'required|string|min:8|confirmed'
+            'roll' => 'required|regex:/^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/',
+            'password' => 'required|string|min:8'
         ]);
 
         $rollNumber = $validated['roll'];
-        $password = $request['password'];
-
-        Log::info('Data:', ['Password' => $password,  $rollNumber]);
+        $password = $validated['password'];
 
         // Find the user by roll number
         $user = MingleUser::where('rollnumber', $rollNumber)->first();
