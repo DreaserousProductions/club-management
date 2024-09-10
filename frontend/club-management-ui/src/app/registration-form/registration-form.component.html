@@ -12,16 +12,15 @@
             <input type="text" placeholder="Enter Email" name="email" required>
 
             <label for="role"><b>Role</b></label>
-            <input type="text" placeholder="Enter Role" name="role" required>
+            <input type="text" placeholder="Enter Role" name="role" required> -->
 
-            <label for="password"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required> -->
+            <label class="hidden" id="otp-label" for="otp"><b>Password</b></label>
+            <input class="hidden" id="otp-input" type="password" placeholder="Enter Password" name="otp" required>
 
             <div class="center-btn">
-                <app-mingle-button buttonText="Register"></app-mingle-button>
+                <app-mingle-button buttonText="Register" [isDisabled]="isButtonDisabled"></app-mingle-button>
+                <span class="message"></span>
             </div>
-
-            <span class="message"></span>
             <!-- <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label> -->

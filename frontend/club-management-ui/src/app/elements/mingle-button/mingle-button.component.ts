@@ -10,4 +10,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class MingleButtonComponent {
   @Input() buttonText: string = 'Default Text';
+  @Input() isDisabled: boolean = false;
 }

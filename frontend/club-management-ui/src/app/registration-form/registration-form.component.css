@@ -57,13 +57,24 @@
 .form-element .center-btn {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 app-mingle-button {
     margin: auto;
-    margin-top: 10px;
+    margin: 10px 0;
     display: block;
+}
+
+.form-element .message {
+    color: var(--main-red);
+    font-size: 12px;
+}
+
+.hidden {
+    display: none;
 }
 
 @keyframes oscillate {

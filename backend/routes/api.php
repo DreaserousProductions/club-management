@@ -8,5 +8,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/users', [MingleUserController::class, 'index']);
-Route::post('/users', [MingleUserController::class, 'mail_otp']);
+// Route::get('/users', [MingleUserController::class, 'index']);
+Route::post('/register', [MingleUserController::class, 'sendOtp']);
+Route::post('/verifyingRegistration', [MingleUserController::class, 'verifyOtp']);
