@@ -1,19 +1,20 @@
 <div class="login-form">
     <div class="form-element">
-        <form (ngSubmit)="loginUser()">
-            <h1 class="title">Login</h1>
-            <label for="rollnumber"><b>Roll Number</b></label>
-            <input id="rollnumber-input" type="text" placeholder="CSXXB10YY" name="rollnumber" required>
+        <div class="title">
+            <h1>Login</h1>
+        </div>
+        <label for="rollnumber"><b>Roll Number</b></label>
+        <input id="rollnumber-input" type="text" placeholder="CSXXB10YY" name="rollnumber" required>
 
-            <label class="hidden" id="pass-label" for="pass"><b>Password</b></label>
-            <input class="hidden" id="pass-input" type="password" placeholder="Enter Password" name="pass" required>
+        <label class="hidden" id="pass-label" for="pass"><b>Password</b></label>
+        <input class="hidden" id="pass-input" type="password" placeholder="Enter Password" name="pass" required>
 
-            <div class="center-btn">
-                <app-mingle-button buttonText="Login" [isDisabled]="isButtonDisabled"></app-mingle-button>
-            </div>
-            <!-- <label>
+        <div class="center-btn">
+            <app-mingle-button id="login-btn" buttonText="Login" [isDisabled]="isButtonDisabled"></app-mingle-button>
+            <span class="message"></span>
+        </div>
+        <!-- <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label> -->
-        </form>
     </div>
 </div>

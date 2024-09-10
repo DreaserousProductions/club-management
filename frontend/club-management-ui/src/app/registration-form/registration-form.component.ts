@@ -33,7 +33,7 @@ export class RegistrationFormComponent {
     const cnf_pass_label = document.querySelector('#cnf-pass-label');
     const cnf_pass_input = document.querySelector('#cnf-pass-input') as HTMLInputElement;
 
-    const register_btn = document.querySelector('.form-element form app-mingle-button');
+    const register_btn = document.querySelector('#register-btn');
 
     // Handle roll number submission
     const handleRollNumberSubmission = () => {

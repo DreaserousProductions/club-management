@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
 import { MingleButtonComponent } from "../elements/mingle-button/mingle-button.component";
 import { HttpClient } from '@angular/common/http';
 
@@ -15,6 +15,8 @@ export class LoginFormComponent {
   constructor(private http: HttpClient) { } // Inject HttpClient
 
   loginUser() {
+    console.log('clicke');
+
     const rollnumber_input = document.querySelector('#rollnumber-input') as HTMLInputElement;
     const password_input = document.querySelector('#pass-input') as HTMLInputElement;
     const server_message = document.querySelector('.form-element .message') as HTMLSpanElement;
@@ -30,17 +32,26 @@ export class LoginFormComponent {
       this.http.post('/user/login', { roll: rollnumber, password: password })
         .subscribe({
           next: (response: any) => { // success handler
-            console.log('Success:', response);
+            server_message.innerHTML = response;
           },
           error: (error: any) => { // error handler
-            console.error('Error:', error);
+            server_message.innerHTML = error;
           },
           complete: () => { // complete handler
-            console.log('Request complete');
           }
         });
     } else {
       server_message.innerHTML = "Please enter both Roll Number and Password.";
     }
+  }
+
+  ngAfterViewInit(): void {
+    const login_btn = document.querySelector("#login-btn");
+    console.log(login_btn);
+
+    login_btn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.loginUser(); // Trigger login function when button is clicked
+    });
   }
 }

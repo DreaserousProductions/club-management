@@ -62,7 +62,7 @@
     align-items: center;
 }
 
-app-mingle-button {
+#register-btn {
     margin: auto;
     margin: 10px 0;
     display: block;
