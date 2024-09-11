@@ -48,9 +48,6 @@ export class ListClubsComponent implements OnInit {
               name: club.name, // Use alias as name
               description: JSON.parse(club.description)["about us"] // Access 'about us' field
             }));
-
-            console.log(this.displayData);
-            console.log(this.listOfClubs);
           },
           error: (err) => {
             console.error('Error fetching clubs:', err);
