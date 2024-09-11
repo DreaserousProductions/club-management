@@ -104,7 +104,6 @@ class MingleUserController extends Controller
         }
     }
 
-    // Login API function
     public function login(Request $request)
     {
         // Validate the input
@@ -112,24 +111,23 @@ class MingleUserController extends Controller
             'roll' => 'required|regex:/^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/',
             'password' => 'required|string|min:8'
         ]);
-
-        $rollNumber = strtolower($validated['roll']);
-        $password = $validated['password'];
-
-        // Check if user exists with the given roll number
-        $user = MingleUser::where('rollnumber', $rollNumber)->first();
-
-        if ($user && Hash::check($password, $user->password)) {
-            // Successful login
-            // Generate JWT token
-            $token = JWTAuth::fromUser($user);
-            return response()->json(['message' => 'Login successful', 
-                'token' => $token,  // Return the JWT token
-                'success' => true
-            ], 200);
-        } else {
-            // Invalid credentials
-            return response()->json(['message' => 'Invalid roll number or password', 'success' => false], 400);
+    
+        // Prepare credentials for attempt
+        $credentials = [
+            'rollnumber' => strtolower($validated['roll']),
+            'password' => $validated['password'],
+        ];
+    
+        // Attempt to authenticate the user and generate a token
+        if (!$token = JWTAuth::attempt($credentials)) {
+            return response()->json(['message' => 'Invalid roll number or password', 'success' => false], 401);
         }
+    
+        // Successful login
+        return response()->json([
+            'message' => 'Login successful',
+            'token' => $token,  // Return the JWT token
+            'success' => true
+        ], 200);
     }
 }
