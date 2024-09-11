@@ -50,9 +50,11 @@ export class RegistrationFormComponent {
                 otp_label?.classList.remove("hidden");
                 otp_input?.classList.remove("hidden");
                 this.isButtonDisabled = false;
+                window.location.href = "/";
               } else {
                 server_message.innerHTML = data.message;
                 this.isButtonDisabled = false;
+                window.location.href = "/";
               }
             },
             error: () => {

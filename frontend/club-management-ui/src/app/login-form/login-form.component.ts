@@ -46,7 +46,6 @@ export class LoginFormComponent {
 
   ngAfterViewInit(): void {
     const login_btn = document.querySelector("#login-btn");
-    console.log(login_btn);
 
     login_btn?.addEventListener('click', (e) => {
       e.preventDefault();

@@ -122,7 +122,6 @@ class MingleUserController extends Controller
             // Successful login
             return response()->json(['message' => 'Login successful', 'success' => true], 200);
         } else {
-            Log::info("smtg", ["smtg" => Hash::check($password, $user->password)]);
             // Invalid credentials
             return response()->json(['message' => 'Invalid roll number or password', 'success' => false], 400);
         }
