@@ -24,6 +24,12 @@ class MingleUser extends Authenticatable implements JWTSubject
 
     protected $table = 'mingle_users';
 
+     // Clubs that the user is a member of
+     public function clubs()
+     {
+         return $this->belongsToMany(Club::class, 'club_member', 'member_id', 'club_id');
+     }
+
     // Add JWT methods
     /**
      * Get the identifier that will be stored in the JWT subject claim.
