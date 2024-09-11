@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 use App\Models\MingleUser;
 
@@ -120,7 +121,12 @@ class MingleUserController extends Controller
 
         if ($user && Hash::check($password, $user->password)) {
             // Successful login
-            return response()->json(['message' => 'Login successful', 'success' => true], 200);
+            // Generate JWT token
+            $token = JWTAuth::fromUser($user);
+            return response()->json(['message' => 'Login successful', 
+                'token' => $token,  // Return the JWT token
+                'success' => true
+            ], 200);
         } else {
             // Invalid credentials
             return response()->json(['message' => 'Invalid roll number or password', 'success' => false], 400);

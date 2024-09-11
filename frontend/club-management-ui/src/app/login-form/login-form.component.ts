@@ -31,9 +31,13 @@ export class LoginFormComponent {
         .subscribe({
           next: (response: any) => { // success handler
             server_message.innerHTML = response.message;
+            localStorage.setItem('mingle-username', rollnumber);
+            localStorage.setItem('mingle-token', response.token);
+            window.location.href = "/home_page";
           },
           error: (error: any) => { // error handler
             server_message.innerHTML = "Invalid rollnumber or password";
+            this.isButtonDisabled = false;
           },
           complete: () => { // complete handler
             this.isButtonDisabled = false;

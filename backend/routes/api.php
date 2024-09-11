@@ -13,3 +13,7 @@ Route::post('/otp/send', [MingleUserController::class, 'sendOtp']);
 Route::post('/otp/verify', [MingleUserController::class, 'verifyOtp']);
 Route::post('/user/create-password', [MingleUserController::class, 'createPassword']);
 Route::post('/user/login', [MingleUserController::class, 'login']);
+
+Route::group(['middleware' => ['jwt.auth']], function () {
+    Route::get('/member', [MemberController::class, 'index']);
+});

@@ -1,24 +1,24 @@
 {
     "/otp/send": {
-        "target": "http://3.221.170.103:8000/api",
+        "target": "http://34.237.220.30:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/otp/verify": {
-        "target": "http://3.221.170.103:8000/api",
+        "target": "http://34.237.220.30:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/user/create-password": {
-        "target": "http://3.221.170.103:8000/api",
+        "target": "http://34.237.220.30:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/user/login": {
-        "target": "http://3.221.170.103:8000/api",
+        "target": "http://34.237.220.30:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
