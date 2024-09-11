@@ -22,5 +22,11 @@
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
+    },
+    "/get-clubs": {
+        "target": "http://34.237.220.30:8000/api",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
     }
 }

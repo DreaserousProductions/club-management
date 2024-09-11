@@ -17,6 +17,8 @@ class Club extends Model
         'treasurer_id', // ID of the treasurer
     ];
 
+    protected $table = 'clubs';
+
     // Define relationships
     public function president()
     {

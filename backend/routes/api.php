@@ -14,6 +14,8 @@ Route::post('/otp/verify', [MingleUserController::class, 'verifyOtp']);
 Route::post('/user/create-password', [MingleUserController::class, 'createPassword']);
 Route::post('/user/login', [MingleUserController::class, 'login']);
 
-Route::group(['middleware' => ['jwt.auth']], function () {
-    Route::get('/member', [MemberController::class, 'index']);
-});
+Route::get('/get-clubs', [ClubController::class, 'index'])->middleware('jwt.auth');
+
+// Route::group(['middleware' => ['jwt.auth']], function () {
+//     Route::get('/member', [ClubController::class, 'index']);
+// });
