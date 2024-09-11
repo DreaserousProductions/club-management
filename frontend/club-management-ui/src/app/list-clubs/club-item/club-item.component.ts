@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-club-item',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './club-item.component.css'
 })
 export class ClubItemComponent {
+  @Input() clubName: string = "";
+  @Input() clubDesc: string = "";
 
 }
