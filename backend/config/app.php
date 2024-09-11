@@ -105,6 +105,10 @@ return [
         ),
     ],
 
+    'middleware' => [
+        'jwt.auth' => \Tymon\JWTAuth\Http\Middleware\Authenticate::class,
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Maintenance Mode Driver
