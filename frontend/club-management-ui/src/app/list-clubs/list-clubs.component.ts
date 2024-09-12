@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { ClubItemComponent } from './club-item/club-item.component';
@@ -13,17 +13,23 @@ import { CommonModule } from '@angular/common';
   templateUrl: './list-clubs.component.html',
   styleUrl: './list-clubs.component.css'
 })
-export class ListClubsComponent implements OnInit {
+export class ListClubsComponent implements OnInit, AfterViewInit {
 
   private apiUrl = '/get-clubs';
 
   private listOfClubs: any[] = [];
   public displayData: any[] = [];
 
+  @ViewChildren('clubItem') clubItems!: QueryList<ClubItemComponent>;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.loadClubs();
+  }
+
+  ngAfterViewInit(): void {
+    this.initClubs();
   }
 
   private loadClubs(): void {
@@ -54,5 +60,15 @@ export class ListClubsComponent implements OnInit {
           }
         });
     }
+  }
+
+  private initClubs(): void {
+    this.clubItems.changes.subscribe(() => {
+      this.clubItems.forEach((clubItem, index) => {
+        clubItem.elementRef.nativeElement.addEventListener('click', () => {
+          console.log(this.listOfClubs[index]);
+        });
+      });
+    });
   }
 }
