@@ -49,6 +49,9 @@ class MingleUser extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         // Add any custom claims you want to include in the token
-        return [];
+        return [
+            'id' => $this->id,
+            'role' => $this->role
+        ];
     }
 }
