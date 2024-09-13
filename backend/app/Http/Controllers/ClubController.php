@@ -33,6 +33,7 @@ class ClubController extends Controller
         }
 
         $data = [
+            'id' => $club->id,
             'name' => $club->name,
             'description' => $club->description,
             'president_id' => $club->president_id,
