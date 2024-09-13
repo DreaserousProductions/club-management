@@ -13,7 +13,7 @@ import { MingleButtonComponent } from "../../elements/mingle-button/mingle-butto
 export class ClubPageComponent implements OnInit {
   constructor(private clubService: ClubService) { }
 
-  club: any[] = []; // Adjust the type based on your actual data model
+  club: any; // Adjust the type based on your actual data model
   error: string | null = null;
 
   private getClub() {
@@ -30,6 +30,11 @@ export class ClubPageComponent implements OnInit {
 
             const description = JSON.parse(clubData.description);
             const mainDiv = document.querySelector('.main-div .club-details');
+            const joinBtn = document.querySelector("#join-club");
+
+            joinBtn?.addEventListener('click', () => {
+              this.joinClub();
+            });
 
             const dataItems = [
               { label: 'Name', value: clubData.name },
@@ -72,7 +77,7 @@ export class ClubPageComponent implements OnInit {
   }
 
   private joinClub(): void {
-
+    this.clubService.joinClub(this.club.id, localStorage.getItem("migle-username"));
   }
 
   ngOnInit(): void {

@@ -31,4 +31,28 @@ export class ClubService {
         })
       );
   }
+
+  joinClub(club_id: number, user_id: any) {
+    if (!user_id) {
+      return throwError(() => new Error('No username provided'));
+    }
+
+    const token = localStorage.getItem('mingle-token');
+    if (!token) {
+      console.error('No JWT token');
+      return throwError(() => new Error('No JWT token'));
+    }
+
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+
+    return this.http.get<any>(`/join-club/${user_id}/${club_id}`, { headers })
+      .pipe(
+        catchError(err => {
+          console.error('Error fetching club:', err);
+          return throwError(() => new Error('Error fetching club'));
+        })
+      );
+  }
 }
