@@ -27,8 +27,22 @@ class ClubController extends Controller
         return response()->json($clubs);
     }
 
-    public function getClub() {
-        $clubs = Club::all();
-        return response()->json($clubs);
+    public function getClub($id, Request $request)
+    {
+        // Validate the request for authentication token
+        $token = $request->bearerToken();
+        if (!$token) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        // Find the club by id
+        $club = Club::find($id);
+        
+        // Check if the club was found
+        if (!$club) {
+            return response()->json(['error' => 'Club not found'], 404);
+        }
+
+        return response()->json($club);
     }
 }

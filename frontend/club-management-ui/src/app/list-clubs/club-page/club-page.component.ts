@@ -14,7 +14,9 @@ export class ClubPageComponent implements OnInit {
 
   getClub() {
     const urlParams = new URLSearchParams(window.location.search);
-    const idParam = urlParams.get("id");
+    const idParam = urlParams.get("index");
+
+    console.log(idParam);
 
     // Ensure idParam is not null and is a valid number
     if (idParam !== null) {
