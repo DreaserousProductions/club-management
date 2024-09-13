@@ -114,7 +114,7 @@ export class RegistrationFormComponent {
             next: (data: any) => {
               if (data.success) {
                 server_message.innerHTML = "Password created successfully.";
-                localStorage.setItem("mingle_registered", "positive");
+                localStorage.setItem("mingle-registered", "positive");
                 this.current_phase = 4;
               } else {
                 server_message.innerHTML = data.message;

@@ -23,8 +23,10 @@ export class NavPanelComponent implements AfterViewInit {
       nav_bg?.classList.toggle("rotate");
     });
 
-    const isRegistered = localStorage.getItem("mingle_registered");
-    if (isRegistered === "positive") {
+    const isRegistered = localStorage.getItem("mingle-registered");
+    const isLoggedIn = localStorage.getItem("mingle-username");
+
+    if (isRegistered === "positive" || isLoggedIn) {
       this.firstButtonLink = "login";
       this.mainButtonLink = "login";
       this.mainButtonText = "Login";
