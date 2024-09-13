@@ -20,8 +20,8 @@ export class ClubService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
-    // /${id}
-    this.http.post<any>(`${this.apiUrl}`, {}, { headers })
+
+    this.http.post<any>(`${this.apiUrl}/${id}`, {}, { headers })
       .subscribe({
         next: (club) => {
           console.log('Club details:', club);
