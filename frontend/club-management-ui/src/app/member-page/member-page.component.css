@@ -1,12 +1,44 @@
-.main-div {
+.member-page-div {
+    padding-top: 60px;
+
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--main-beige);
+}
+
+.first-row {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--trn-beige);
+
+    padding: 5px 20px;
+    background-color: var(--trn-dark-shade);
+
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.first-row .avatar img {
+    max-width: 100px;
+}
+
+.first-row .name {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    min-height: 100vh;
+    width: 80%;
 }
 
-p {
-    color: beige;
-    font-size: 40px;
+.second-row {
+    margin: 20px;
 }

@@ -29,6 +29,15 @@ class ClubJoinController extends Controller
             return response()->json(['error' => 'User not found'], 404);
         }
 
+        // Check for existing join request
+        $existingRequest = ClubJoinRequest::where('club_id', $request->input('club_id'))
+            ->where('user_id', $userId)
+            ->first();
+
+        if ($existingRequest) {
+            return response()->json(['error' => 'Request already exists'], 409); // Conflict status code
+        }
+
         // Create a new club join request
         $joinRequest = ClubJoinRequest::create([
             'club_id' => $request->input('club_id'),
