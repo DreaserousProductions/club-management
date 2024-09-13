@@ -77,7 +77,7 @@ export class ClubPageComponent implements OnInit {
   }
 
   private joinClub(): void {
-    this.clubService.joinClub(this.club.id, localStorage.getItem("migle-username")).subscribe({
+    this.clubService.joinClub(this.club.id, localStorage.getItem("mingle-username")).subscribe({
       next: (response) => {
         console.log('Successfully joined the club', response);
         // Handle success (e.g., show a message to the user)

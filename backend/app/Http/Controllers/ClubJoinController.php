@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ClubJoinRequest;
+use App\Models\MingleUser;
 use Illuminate\Support\Facades\Validator;
 
 class ClubJoinController extends Controller
