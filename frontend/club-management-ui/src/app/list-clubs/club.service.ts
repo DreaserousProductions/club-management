@@ -23,7 +23,7 @@ export class ClubService {
       'Authorization': `Bearer ${token}`
     });
 
-    return this.http.post<any>(`${this.apiUrl}/${id}`, {}, { headers })
+    return this.http.get<any>(`${this.apiUrl}/${id}`, { headers })
       .pipe(
         catchError(err => {
           console.error('Error fetching club:', err);
