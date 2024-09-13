@@ -28,5 +28,11 @@
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
+    },
+    "/get-club": {
+        "target": "http://98.81.34.89:8000/api",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
     }
 }
