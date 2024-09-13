@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('club_join_requests', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('mingle_users')->onDelete('cascade');
+            $table->foreignId('club_id')->constrained('clubs')->onDelete('cascade');
             $table->timestamps();
         });
     }

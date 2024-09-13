@@ -71,6 +71,10 @@ export class ClubPageComponent implements OnInit {
     }
   }
 
+  private joinClub(): void {
+
+  }
+
   ngOnInit(): void {
     this.getClub();
   }
