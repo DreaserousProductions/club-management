@@ -16,8 +16,8 @@ Route::post('/user/create-password', [MingleUserController::class, 'createPasswo
 Route::post('/user/login', [MingleUserController::class, 'login']);
 
 // Route::get('/get-clubs', [ClubController::class, 'index']);
-Route::get('/get-clubs', [ClubController::class, 'index'])->middleware('jwt.auth');
 
-// Route::group(['middleware' => ['jwt.auth']], function () {
-//     Route::get('/member', [ClubController::class, 'index']);
-// });
+Route::group(['middleware' => ['jwt.auth']], function () {
+    Route::get('/get-clubs', [ClubController::class, 'index'])->middleware('jwt.auth');
+    Route::get('/get-club', [ClubController::class, 'getClub'])->middleware('jwt.auth');
+});
