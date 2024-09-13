@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('clubjoinrequests', function (Blueprint $table) {
-            //
+        Schema::table('club_join_requests', function (Blueprint $table) {
+            $table->boolean('approved')->default(false);
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('clubjoinrequests', function (Blueprint $table) {
-            //
+        Schema::table('club_join_requests', function (Blueprint $table) {
+            $table->dropColumn('approved');
         });
     }
 };

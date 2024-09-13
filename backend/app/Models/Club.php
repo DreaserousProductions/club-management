@@ -15,6 +15,7 @@ class Club extends Model
         'president_id', // ID of the president
         'secretary_id', // ID of the secretary
         'treasurer_id', // ID of the treasurer
+        'members',
     ];
 
     protected $table = 'clubs';
