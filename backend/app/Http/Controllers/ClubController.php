@@ -12,7 +12,7 @@ class ClubController extends Controller
     // Display a listing of the clubs
     public function index()
     {
-        $clubs = Club::select('id', 'name', DB::raw("JSON_EXTRACT(description, '$.about us') as about_us"))->get();
+        $clubs = Club::select('id', 'name', DB::raw("JSON_EXTRACT(description, '$.\"about us\"us') as about_us"))->get();
         return response()->json($clubs);
     }
 
