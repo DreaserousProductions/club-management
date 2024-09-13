@@ -1,36 +1,36 @@
 {
     "/otp/send": {
-        "target": "http://98.81.34.89:8000/api",
+        "target": "http://44.197.176.179:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/otp/verify": {
-        "target": "http://98.81.34.89:8000/api",
+        "target": "http://44.197.176.179:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/user/create-password": {
-        "target": "http://98.81.34.89:8000/api",
+        "target": "http://44.197.176.179:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/user/login": {
-        "target": "http://98.81.34.89:8000/api",
+        "target": "http://44.197.176.179:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/get-clubs": {
-        "target": "http://98.81.34.89:8000/api",
+        "target": "http://44.197.176.179:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/get-club": {
-        "target": "http://98.81.34.89:8000/api",
+        "target": "http://44.197.176.179:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"

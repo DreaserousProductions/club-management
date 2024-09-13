@@ -52,7 +52,7 @@ export class ListClubsComponent implements OnInit, AfterViewInit {
 
             this.displayData = this.listOfClubs.map(club => ({
               name: club.name, // Use alias as name
-              description: JSON.parse(club.description)["about us"] // Access 'about us' field
+              description: club.about // Access 'about us' field
             }));
           },
           error: (err) => {
