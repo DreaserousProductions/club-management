@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
 import { ClubService } from '../club.service';
 import { MingleButtonComponent } from "../../elements/mingle-button/mingle-button.component";
 
@@ -11,6 +10,8 @@ import { MingleButtonComponent } from "../../elements/mingle-button/mingle-butto
   styleUrl: './club-page.component.css'
 })
 export class ClubPageComponent implements OnInit {
+  @Input() isButtonDisabled: boolean = false;
+
   constructor(private clubService: ClubService) { }
 
   club: any; // Adjust the type based on your actual data model
@@ -77,14 +78,17 @@ export class ClubPageComponent implements OnInit {
   }
 
   private joinClub(): void {
+    this.isButtonDisabled = true;
     this.clubService.joinClub(this.club.id, localStorage.getItem("mingle-username")).subscribe({
       next: (response) => {
         console.log('Successfully joined the club', response);
+        const joinBtn = document.querySelector("#join-club");
+        joinBtn?.classList.add("hidden");
         // Handle success (e.g., show a message to the user)
       },
       error: (error) => {
         console.error('Error joining the club', error);
-        // Handle error (e.g., show an error message to the user)
+        this.isButtonDisabled = false;
       },
       complete: () => {
         console.log('Request completed');

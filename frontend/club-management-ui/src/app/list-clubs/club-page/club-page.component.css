@@ -10,3 +10,7 @@
 .main-div .club-details {
     color: var(--main-beige);
 }
+
+.hidden {
+    display: none;
+}
