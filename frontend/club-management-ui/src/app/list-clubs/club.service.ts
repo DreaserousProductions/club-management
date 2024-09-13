@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,26 +12,23 @@ export class ClubService {
 
   constructor(private http: HttpClient) { }
 
-  getClub(id: number): void {
+  getClub(id: number): Observable<any> {
     const token = localStorage.getItem('mingle-token');
     if (!token) {
       console.error('No JWT token');
-      return;
+      return throwError(() => new Error('No JWT token'));
     }
 
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
 
-    this.http.post<any>(`${this.apiUrl}/${id}`, {}, { headers })
-      .subscribe({
-        next: (club) => {
-          console.log('Club details:', club);
-          // Handle the response, e.g., update the component's state
-        },
-        error: (err) => {
+    return this.http.post<any>(`${this.apiUrl}/${id}`, {}, { headers })
+      .pipe(
+        catchError(err => {
           console.error('Error fetching club:', err);
-        }
-      });
+          return throwError(() => new Error('Error fetching club'));
+        })
+      );
   }
 }
