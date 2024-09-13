@@ -1,13 +1,15 @@
 <nav>
     <div class="container-lg">
-        <div class="nav-brand-text">
-            <span data_text="M"></span>
-            <span data_text="i"></span>
-            <span data_text="n"></span>
-            <span data_text="g"></span>
-            <span data_text="l"></span>
-            <span data_text="e"></span>
-        </div>
+        <a routerLink="" routerLinkActive=" active">
+            <div class="nav-brand-text">
+                <span data_text="M"></span>
+                <span data_text="i"></span>
+                <span data_text="n"></span>
+                <span data_text="g"></span>
+                <span data_text="l"></span>
+                <span data_text="e"></span>
+            </div>
+        </a>
 
         <div class="nav-logo-container">
             <div class="logo-bg">
@@ -16,11 +18,11 @@
                     <a [routerLink]="firstButtonLink" routerLinkActive="active">
                         <img src="/information-button.png" alt="" title="About Us">
                     </a>
-                    <a routerLink="" routerLinkActive="active">
+                    <a routerLink="/home_page" routerLinkActive="active">
                         <img src="/home.png" alt="" title="Home">
                     </a>
-                    <a href="#">
-                        <img src="/contact-mail.png" alt="" title="Contact Us  ">
+                    <a routerLink="/club_list" routerLinkActive=" active">
+                        <img src="/contact-mail.png" alt="" title="Contact Us">
                     </a>
                 </div>
             </div>

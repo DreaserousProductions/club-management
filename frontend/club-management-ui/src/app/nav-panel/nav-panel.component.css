@@ -3,6 +3,8 @@
     font-size: 24px;
     letter-spacing: -1px;
     font-weight: 900;
+
+    color: var(--main-beige);
 }
 
 .nav-brand-text span:nth-child(2) {
@@ -17,6 +19,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    z-index: 10;
+
+    pointer-events: none;
 }
 
 .nav-logo-container .logo img {
@@ -24,6 +30,8 @@
     cursor: pointer;
 
     transition: transform .3s;
+
+    pointer-events: all;
 }
 
 .nav-logo-container .logo img.active {
@@ -85,6 +93,8 @@
     max-width: 32px;
     transform: translateY(200px);
     filter: invert(1);
+
+    pointer-events: all;
 }
 
 /* Menu Buttons */
