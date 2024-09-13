@@ -26,4 +26,8 @@ class ClubController extends Controller
         $clubs = Club::all();
         return response()->json($clubs);
     }
+
+    public function getClub() {
+        
+    }
 }

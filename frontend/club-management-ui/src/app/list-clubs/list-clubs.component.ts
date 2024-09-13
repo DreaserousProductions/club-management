@@ -66,7 +66,8 @@ export class ListClubsComponent implements OnInit, AfterViewInit {
     this.clubItems.changes.subscribe(() => {
       this.clubItems.forEach((clubItem, index) => {
         clubItem.elementRef.nativeElement.addEventListener('click', () => {
-          console.log(this.listOfClubs[index]);
+          // console.log(this.listOfClubs[index]["id"]);
+          window.location.href = `/club_page?index=${this.listOfClubs[index]["id"]}`;
         });
       });
     });
