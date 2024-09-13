@@ -77,7 +77,20 @@ export class ClubPageComponent implements OnInit {
   }
 
   private joinClub(): void {
-    this.clubService.joinClub(this.club.id, localStorage.getItem("migle-username"));
+    this.clubService.joinClub(this.club.id, localStorage.getItem("migle-username")).subscribe({
+      next: (response) => {
+        console.log('Successfully joined the club', response);
+        // Handle success (e.g., show a message to the user)
+      },
+      error: (error) => {
+        console.error('Error joining the club', error);
+        // Handle error (e.g., show an error message to the user)
+      },
+      complete: () => {
+        console.log('Request completed');
+        // Handle completion (optional, if needed)
+      }
+    });
   }
 
   ngOnInit(): void {

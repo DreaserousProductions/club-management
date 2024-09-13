@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MingleUserController;
+use App\Http\Controllers\ClubJoinController;
 use App\Http\Controllers\ClubController;
 
 Route::get('/user', function (Request $request) {
@@ -20,4 +21,5 @@ Route::post('/user/login', [MingleUserController::class, 'login']);
 Route::group(['middleware' => ['jwt.auth']], function () {
     Route::get('/get-clubs', [ClubController::class, 'index'])->middleware('jwt.auth');
     Route::get('/get-club/{id}', [ClubController::class, 'getClub'])->middleware('jwt.auth');
+    Route::post('/join-club', [ClubJoinController::class, 'store'])->middleware('jwt.auth');
 });

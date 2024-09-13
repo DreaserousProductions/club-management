@@ -34,12 +34,11 @@ export class ClubService {
 
   joinClub(club_id: number, user_id: any) {
     if (!user_id) {
-      return throwError(() => new Error('No username provided'));
+      return throwError(() => new Error('No user ID provided'));
     }
 
     const token = localStorage.getItem('mingle-token');
     if (!token) {
-      console.error('No JWT token');
       return throwError(() => new Error('No JWT token'));
     }
 
@@ -47,11 +46,11 @@ export class ClubService {
       'Authorization': `Bearer ${token}`
     });
 
-    return this.http.get<any>(`/join-club/${user_id}/${club_id}`, { headers })
+    return this.http.post<any>(`/join-club`, { club_id: club_id, user_id: user_id }, { headers })
       .pipe(
-        catchError(err => {
-          console.error('Error fetching club:', err);
-          return throwError(() => new Error('Error fetching club'));
+        catchError(error => {
+          console.error('Error joining club', error);
+          return throwError(() => new Error('Error joining club'));
         })
       );
   }
