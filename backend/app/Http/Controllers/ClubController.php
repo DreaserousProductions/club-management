@@ -32,6 +32,14 @@ class ClubController extends Controller
             return response()->json(['error' => 'Club not found'], 404);
         }
 
+        $data = [
+            'name' => $club->name,
+            'description' => $club->description,
+            'president_id' => $club->president_id,
+            'secretary_id' => $club->secretary_id,
+            'treasurer_id' => $club->treasurer_id 
+        ];
+
         return response()->json($club);
     }
 }
