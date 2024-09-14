@@ -1,10 +1,11 @@
-import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, OnInit, QueryList } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { ClubItemComponent } from './club-item/club-item.component';
 import { TitleCardComponent } from "./title-card/title-card.component";
 import { ListMembersComponent } from "./list-members/list-members.component";
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-clubs',
@@ -13,23 +14,21 @@ import { CommonModule } from '@angular/common';
   templateUrl: './list-clubs.component.html',
   styleUrl: './list-clubs.component.css'
 })
-export class ListClubsComponent implements OnInit, AfterViewInit {
+export class ListClubsComponent implements OnInit {
 
   private apiUrl = '/get-clubs';
 
   private listOfClubs: any[] = [];
   public displayData: any[] = [];
 
-  @ViewChildren('clubItem') clubItems!: QueryList<ClubItemComponent>;
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.loadClubs();
   }
 
   ngAfterViewInit(): void {
-    this.initClubs();
+    // this.initClubs();
   }
 
   private loadClubs(): void {
@@ -52,7 +51,8 @@ export class ListClubsComponent implements OnInit, AfterViewInit {
 
             this.displayData = this.listOfClubs.map(club => ({
               name: club.name, // Use alias as name
-              description: club.about_us// Access 'about us' field
+              description: club.about_us, // Access 'about us' field
+              id: club.id,
             }));
           },
           error: (err) => {
@@ -62,14 +62,7 @@ export class ListClubsComponent implements OnInit, AfterViewInit {
     }
   }
 
-  private initClubs(): void {
-    this.clubItems.changes.subscribe(() => {
-      this.clubItems.forEach((clubItem, index) => {
-        clubItem.elementRef.nativeElement.addEventListener('click', () => {
-          // console.log(this.listOfClubs[index]["id"]);
-          window.location.href = `/club_page?index=${this.listOfClubs[index]["id"]}`;
-        });
-      });
-    });
+  onClubItemClick(clubId: number): void {
+    this.router.navigate(['/club_page'], { queryParams: { index: clubId } });
   }
 }

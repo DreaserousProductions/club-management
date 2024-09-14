@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-club-item',
@@ -10,6 +10,12 @@ import { Component, ElementRef, Input } from '@angular/core';
 export class ClubItemComponent {
   @Input() clubName: string = "";
   @Input() clubDesc: string = "";
+
+  @Output() itemClicked = new EventEmitter<void>();
+
+  onClick(): void {
+    this.itemClicked.emit();
+  }
 
   constructor(public elementRef: ElementRef) { }
 }

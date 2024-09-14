@@ -1,42 +1,42 @@
 {
     "/otp/send": {
-        "target": "http://34.201.14.1:8000/api",
+        "target": "http://54.236.63.35:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/otp/verify": {
-        "target": "http://34.201.14.1:8000/api",
+        "target": "http://54.236.63.35:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/user/create-password": {
-        "target": "http://34.201.14.1:8000/api",
+        "target": "http://54.236.63.35:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/user/login": {
-        "target": "http://34.201.14.1:8000/api",
+        "target": "http://54.236.63.35:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/get-clubs": {
-        "target": "http://34.201.14.1:8000/api",
+        "target": "http://54.236.63.35:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/get-club": {
-        "target": "http://34.201.14.1:8000/api",
+        "target": "http://54.236.63.35:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/join-club": {
-        "target": "http://34.201.14.1:8000/api",
+        "target": "http://54.236.63.35:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"

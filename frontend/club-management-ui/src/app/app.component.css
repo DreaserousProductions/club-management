@@ -19,7 +19,7 @@ iframe {
     border-radius: 10px 10px 0 0;
     box-shadow: inset 0 0 8px var(--trn-beige), 0 0 8px var(--trn-beige);
 
-    /* background-color: var(--trn-dark-shade); */
+    background-color: var(--trn-dark-shade);
     -webkit-backdrop-filter: blur(1000px);
     backdrop-filter: blur(1000px);
 

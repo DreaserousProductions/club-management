@@ -1,6 +1,15 @@
+.super-member-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .member-page-div {
     padding-top: 60px;
 
+    width: 100%;
     max-width: 1200px;
 
     display: flex;
@@ -36,9 +45,59 @@
     align-items: center;
     justify-content: center;
 
+    font-family: "Inconsolata";
+
     width: 80%;
+}
+
+.first-row i {
+    font-size: 24px;
 }
 
 .second-row {
     margin: 20px;
+}
+
+/* Temp */
+.avatar {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar img {
+    display: block;
+    width: 100px;
+    /* Adjust size as needed */
+    height: 100px;
+    /* Adjust size as needed */
+}
+
+.avatar i.fas.fa-pen {
+    position: absolute;
+    left: 50%;
+    bottom: 24%;
+    font-size: 24px;
+    transform: translateX(-50%);
+    /* Adjust size as needed */
+    background-color: var(--trn-dark-shade);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="text"] {
+    padding: 4px 10px;
+    border: 1px solid var(--trn-teal);
+    border-radius: 10px;
+
+    font-size: 24px;
+
+    background: none;
+    color: var(--main-beige);
+
+    text-align: center;
 }

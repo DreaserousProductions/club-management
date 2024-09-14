@@ -2,8 +2,8 @@
     <app-title-card></app-title-card>
 
     <!-- <app-list-members></app-list-members> -->
-    <app-club-item #clubItem *ngFor="let club of displayData" [clubName]="club.name"
-        [clubDesc]="club.description"></app-club-item>
+    <app-club-item #clubItem *ngFor="let club of displayData" [clubName]="club.name" [clubDesc]="club.description"
+        (itemClicked)="onClubItemClick(club.id)"></app-club-item>
     <!-- <app-club-item></app-club-item> -->
     <!-- <app-club-item></app-club-item> -->
     <!-- <app-club-item></app-club-item> -->
