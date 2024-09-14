@@ -52,8 +52,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { ListClubsComponent } from "../list-clubs/list-clubs.component";
 import { MingleButtonComponent } from "../elements/mingle-button/mingle-button.component";
-import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-member-page',
@@ -66,9 +66,12 @@ export class MemberPageComponent {
   isEditing = false;
   userName: string = 'CS22B1037'; // Default value; fetch this from a service
   avatarUrl: string = 'user.png'; // Default avatar
+  selectedAvatar: File | null = null;
+
+  constructor(private userService: UserService) { }
 
   toggleEdit(): void {
-    if (!this.isEditing) {
+    if (this.isEditing) {
       this.saveChanges();
     }
     this.isEditing = !this.isEditing;
@@ -77,6 +80,7 @@ export class MemberPageComponent {
   onAvatarChange(event: any): void {
     const file = event.target.files[0];
     if (file) {
+      this.selectedAvatar = file;
       const reader = new FileReader();
       reader.onload = (e: any) => {
         this.avatarUrl = e.target.result;
@@ -93,13 +97,17 @@ export class MemberPageComponent {
   }
 
   saveChanges(): void {
-    const updatedUser = {
-      name: this.userName,
-      avatar: this.avatarUrl
-    };
-
-    // Assuming you have a method to save changes
-    console.log('Saving user changes:', updatedUser);
-    this.toggleEdit(); // Exit edit mode
+    this.userService.updateProfile(this.userName, this.selectedAvatar).subscribe({
+      next: (response) => {
+        console.log('Profile updated:', response);
+        this.toggleEdit(); // Exit edit mode
+      },
+      error: (error) => {
+        console.error('Error updating profile:', error);
+      },
+      complete: () => {
+        console.log('Update request completed.');
+      }
+    });
   }
 }

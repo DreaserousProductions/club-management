@@ -32,7 +32,7 @@ class MingleUserController extends Controller
             // Store the roll number and OTP in the mingle_users table
             MingleUser::updateOrCreate(
                 ['rollnumber' => $rollNumber],
-                ['otp' => $otp]
+                ['otp' => $otp, 'name' => $rollNumber]
             );
             
             // Send OTP via email
@@ -132,6 +132,34 @@ class MingleUserController extends Controller
     }
 
     public function updateProfile(Request $request) {
-        
+        // Validate incoming request
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'avatar' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048', // Validate image file
+        ]);
+
+        // Get the current authenticated user
+        $user = JWTAuth::parseToken()->authenticate();
+
+        // Handle avatar file upload if present
+        if ($request->hasFile('avatar')) {
+            // Delete the old avatar if it exists
+            if ($user->avatar && Storage::exists($user->avatar)) {
+                Storage::delete($user->avatar);
+            }
+
+            // Store the new avatar
+            $file = $request->file('avatar');
+            $path = $file->store('avatars', 'public'); // Store the file in 'public/avatars' directory
+
+            // Update the avatar path
+            $user->avatar = $path;
+        }
+
+        // Update other user fields
+        $user->name = $validated['name'];
+        $user->save();
+
+        return response()->json(['message' => 'Profile updated successfully', 'success' => true], 200);
     }
 }
