@@ -40,5 +40,11 @@
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
+    },
+    "/update-profile": {
+        "target": "http://54.236.63.35:8000/api",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
     }
 }

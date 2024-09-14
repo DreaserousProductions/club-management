@@ -1,29 +1,27 @@
 <div class="register-form">
     <div class="form-element">
-        <form>
-            <h1 class="title">Register</h1>
-            <label for="rollnumber"><b>Roll Number</b></label>
-            <input id="rollnumber-input" type="text" placeholder="CSXXB10YY" name="rollnumber" required>
+        <h1 class="title">Register</h1>
+        <label for="rollnumber"><b>Roll Number</b></label>
+        <input id="rollnumber-input" type="text" placeholder="CSXXB10YY" name="rollnumber" required>
 
-            <label class="hidden" id="otp-label" for="otp"><b>OTP</b></label>
-            <input class="hidden" id="otp-input" type="password" placeholder="Enter OTP" name="otp" required>
+        <label class="hidden" id="otp-label" for="otp"><b>OTP</b></label>
+        <input class="hidden" id="otp-input" type="password" placeholder="Enter OTP" name="otp" required>
 
-            <label class="hidden" id="pass-label" for="pass"><b>Password</b></label>
-            <input class="hidden" id="pass-input" type="password" placeholder="Enter Password" name="pass" required>
+        <label class="hidden" id="pass-label" for="pass"><b>Password</b></label>
+        <input class="hidden" id="pass-input" type="password" placeholder="Enter Password" name="pass" required>
 
-            <label class="hidden" id="cnf-pass-label" for="cnf-pass"><b>Confirm Password</b></label>
-            <input class="hidden" id="cnf-pass-input" type="password" placeholder="Confirm Password" name="cnf-pass"
-                required>
+        <label class="hidden" id="cnf-pass-label" for="cnf-pass"><b>Confirm Password</b></label>
+        <input class="hidden" id="cnf-pass-input" type="password" placeholder="Confirm Password" name="cnf-pass"
+            required>
 
-            <div class="center-btn">
-                <app-mingle-button id="register-btn" [buttonText]="formButtonText"
-                    [isDisabled]="isButtonDisabled"></app-mingle-button>
-                <span class="message"></span>
-                <a routerLink="/login" routerLinkActive="active" class="re-route">Already registered? Login</a>
-            </div>
-            <!-- <label>
+        <div class="center-btn">
+            <app-mingle-button id="register-btn" [buttonText]="formButtonText"
+                [isDisabled]="isButtonDisabled"></app-mingle-button>
+            <span class="message"></span>
+            <a routerLink="/login" routerLinkActive="active" class="re-route">Already registered? Login</a>
+        </div>
+        <!-- <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label> -->
-        </form>
     </div>
 </div>

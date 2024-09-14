@@ -24,7 +24,7 @@ export class RegistrationFormComponent {
     const regex = /^[A-Za-z]{2}\d{2}[BDMbdm]\d{4}$/;
 
     const rollnumber_input = document.querySelector('#rollnumber-input') as HTMLInputElement;
-    const server_message = document.querySelector('.form-element form .message') as HTMLSpanElement;
+    const server_message = document.querySelector('.form-element .message') as HTMLSpanElement;
     const otp_label = document.querySelector('#otp-label');
     const otp_input = document.querySelector('#otp-input') as HTMLInputElement;
 
@@ -50,7 +50,6 @@ export class RegistrationFormComponent {
                 otp_label?.classList.remove("hidden");
                 otp_input?.classList.remove("hidden");
                 this.isButtonDisabled = false;
-                window.location.href = "/";
               } else {
                 server_message.innerHTML = data.message;
                 this.isButtonDisabled = false;
@@ -116,6 +115,7 @@ export class RegistrationFormComponent {
                 server_message.innerHTML = "Password created successfully.";
                 localStorage.setItem("mingle-registered", "positive");
                 this.current_phase = 4;
+                window.location.href = "/";
               } else {
                 server_message.innerHTML = data.message;
                 this.isButtonDisabled = false;
