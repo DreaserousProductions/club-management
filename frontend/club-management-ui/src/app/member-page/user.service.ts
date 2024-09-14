@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,10 @@ export class UserService {
   private apiUrl = `/update-profile`;
 
   constructor(private http: HttpClient) { }
+
+  retrieveProfile(): Observable<any> {
+    return this.http.get<any>(`/retrieve-profile`);
+  }
 
   updateProfile(userName: string, avatar: File | null) {
     const token = localStorage.getItem('mingle-token');

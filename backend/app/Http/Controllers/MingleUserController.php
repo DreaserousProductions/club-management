@@ -132,6 +132,23 @@ class MingleUserController extends Controller
         ], 200);
     }
 
+    public function retrieveProfile()
+    {
+        // Get the current authenticated user
+        $user = JWTAuth::parseToken()->authenticate();
+
+        // Check if user is authenticated
+        if (!$user) {
+            return response()->json(['message' => 'User not authenticated'], 401);
+        }
+
+        // Return user data (name and avatar path)
+        return response()->json([
+            'name' => $user->name,
+            'avatar' => $user->avatar_img_path // Make sure this is a URL or path to the avatar image
+        ], 200);
+    }
+
     public function updateProfile(Request $request) {
         // Validate incoming request
         $validated = $request->validate([

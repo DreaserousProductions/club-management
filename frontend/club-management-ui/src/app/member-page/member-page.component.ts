@@ -46,7 +46,7 @@
 //   }
 // }
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -62,13 +62,32 @@ import { UserService } from './user.service';
   templateUrl: './member-page.component.html',
   styleUrls: ['./member-page.component.css'] // Changed to styleUrls
 })
-export class MemberPageComponent {
+export class MemberPageComponent implements OnInit {
   isEditing = false;
-  userName: string = 'CS22B1037'; // Default value; fetch this from a service
-  avatarUrl: string = 'user.png'; // Default avatar
+  userName: string = ''; // Default value; fetch this from a service
+  avatarUrl: string = ''; // Default avatar
   selectedAvatar: File | null = null;
 
   constructor(private userService: UserService) { }
+
+  ngOnInit(): void {
+    this.loadProfile();
+  }
+
+  loadProfile(): void {
+    this.userService.retrieveProfile().subscribe({
+      next: (response) => {
+        this.userName = response.name;
+        this.avatarUrl = `storage/${response.avatar}`;
+      },
+      error: (error) => {
+        console.error('Error loading profile:', error);
+      },
+      complete: () => {
+        console.log('Profile load complete.');
+      }
+    });
+  }
 
   toggleEdit(): void {
     if (this.isEditing) {
@@ -100,7 +119,6 @@ export class MemberPageComponent {
     this.userService.updateProfile(this.userName, this.selectedAvatar).subscribe({
       next: (response) => {
         console.log('Profile updated:', response);
-        this.toggleEdit(); // Exit edit mode
       },
       error: (error) => {
         console.error('Error updating profile:', error);
