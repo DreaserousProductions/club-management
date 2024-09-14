@@ -47,6 +47,12 @@
         "changeOrigin": true,
         "logLevel": "debug"
     },
+    "/retrieve-profile": {
+        "target": "http://54.236.63.35:8000/api",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
     "/storage": {
         "target": "http://54.236.63.35:8000",
         "secure": false,
