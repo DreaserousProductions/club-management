@@ -130,4 +130,8 @@ class MingleUserController extends Controller
             'success' => true
         ], 200);
     }
+
+    public function updateProfile(Request $request) {
+        
+    }
 }

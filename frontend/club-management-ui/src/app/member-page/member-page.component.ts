@@ -68,6 +68,9 @@ export class MemberPageComponent {
   avatarUrl: string = 'user.png'; // Default avatar
 
   toggleEdit(): void {
+    if (!this.isEditing) {
+      this.saveChanges();
+    }
     this.isEditing = !this.isEditing;
   }
 
