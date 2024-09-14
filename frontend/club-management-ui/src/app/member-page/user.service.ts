@@ -11,7 +11,16 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   retrieveProfile(): Observable<any> {
-    return this.http.get<any>(`/retrieve-profile`);
+    const token = localStorage.getItem('mingle-token');
+    if (!token) {
+      return throwError(() => new Error('No JWT token'));
+    }
+
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+
+    return this.http.get<any>(`/retrieve-profile`, { headers });
   }
 
   updateProfile(userName: string, avatar: File | null) {
