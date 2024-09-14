@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,15 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   updateProfile(userName: string, avatar: File | null) {
+    const token = localStorage.getItem('mingle-token');
+    if (!token) {
+      return throwError(() => new Error('No JWT token'));
+    }
+
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+
     const formData = new FormData();
     formData.append('name', userName);
 
@@ -17,6 +27,6 @@ export class UserService {
       formData.append('avatar', avatar, avatar.name);
     }
 
-    return this.http.post(this.apiUrl, formData);
+    return this.http.post(this.apiUrl, formData, { headers });
   }
 }

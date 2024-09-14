@@ -144,8 +144,8 @@ class MingleUserController extends Controller
         // Handle avatar file upload if present
         if ($request->hasFile('avatar')) {
             // Delete the old avatar if it exists
-            if ($user->avatar && Storage::exists($user->avatar)) {
-                Storage::delete($user->avatar);
+            if ($user->avatar_img_path && Storage::exists($user->avatar_img_path)) {
+                Storage::delete($user->avatar_img_path);
             }
 
             // Store the new avatar
@@ -153,7 +153,7 @@ class MingleUserController extends Controller
             $path = $file->store('avatars', 'public'); // Store the file in 'public/avatars' directory
 
             // Update the avatar path
-            $user->avatar = $path;
+            $user->avatar_img_path = $path;
         }
 
         // Update other user fields
