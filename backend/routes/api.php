@@ -23,5 +23,5 @@ Route::group(['middleware' => ['jwt.auth']], function () {
     Route::get('/get-club/{id}', [ClubController::class, 'getClub'])->middleware('jwt.auth');
     Route::post('/join-club', [ClubJoinController::class, 'store'])->middleware('jwt.auth');
     Route::post('/update-profile', [MingleUserController::class, 'updateProfile'])->middleware('jwt.auth');
-    Route::post('/retrieve-profile', [MingleUserController::class, 'retrieveProfile'])->middleware('jwt.auth');
+    Route::get('/retrieve-profile', [MingleUserController::class, 'retrieveProfile'])->middleware('jwt.auth');
 });
