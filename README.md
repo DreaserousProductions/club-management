@@ -87,7 +87,6 @@ To view the project, please contact `+91 72000 97169` (WhatsApp) or `naghul.pran
 ## Current Progress
 
 ### Front-End Requirements (Angular)
-<details>
 - [x] A responsive user interface that lists all the clubs and their members.
 - [ ] Forms to add new clubs and update club details (e.g., name, description, etc.). ![10%](https://progress-bar.xyz/10)
 - [ ] Member management functionality including adding new members, editing member information, and removing members from the club. ![40%](https://progress-bar.xyz/40)
@@ -96,7 +95,6 @@ To view the project, please contact `+91 72000 97169` (WhatsApp) or `naghul.pran
 - [x] User authentication pages for login and registration.
 - [ ] Admin dashboard for managing clubs and their members. ![60%](https://progress-bar.xyz/60)
 - [x] Role-based access control to differentiate between regular members and club administrators.
-</details>
 
 ### Back-End Requirements (PHP Framework)
 - [x] Develop a RESTful API using Laravel to handle CRUD operations for clubs and member records.
