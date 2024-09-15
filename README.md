@@ -91,17 +91,17 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
 
 ### Front-End Requirements (Angular)
 - [x] A responsive user interface that lists all the clubs and their members.
-- [x] Forms to add new clubs and update club details (e.g., name, description, etc.).
-- [x] Member management functionality including adding new members, editing member information, and removing members from the club.
-- [x] Search and filter options to easily locate specific members or clubs.
+- [ ] Forms to add new clubs and update club details (e.g., name, description, etc.). ![10%](https://progress-bar.xyz/10)
+- [ ] Member management functionality including adding new members, editing member information, and removing members from the club. ![40%](https://progress-bar.xyz/40)
+- [ ] Search and filter options to easily locate specific members or clubs. ![10%](https://progress-bar.xyz/10)
 - [x] A page for viewing detailed information about a club and its members.
 - [x] User authentication pages for login and registration.
-- [x] Admin dashboard for managing clubs and their members.
-- [x] Role-based access control to differentiate between regular members and club administrators.
+- [x] Admin dashboard for managing clubs and their members. ![60%](https://progress-bar.xyz/60)
+- [ ] Role-based access control to differentiate between regular members and club administrators.
 
 ### Back-End Requirements (PHP Framework)
 - [x] Develop a RESTful API using Laravel to handle CRUD operations for clubs and member records.
-- [ ] Maintainability and readability of code. ![50%](https://progress-bar.xyz/50)
+- [ ] Maintainability and readability of code. ![60%](https://progress-bar.xyz/60)
 - [x] Secure authentication and session management using industry best practices (e.g., password hashing, secure token generation).
 - [x] Implement role-based access control to ensure only authorized users can modify club and member information.
 - [x] Validate all user input on both the client-side and server-side to prevent malicious data entry.
@@ -114,8 +114,8 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
 - [x] Login and Registration Pages – for user authentication.
 - [x] Club List Page – displays a list of all clubs with options to add, edit, or delete.
 - [x] Club Detail Page – shows detailed information about a selected club, including member lists.
-- [x] Member Management Page – for adding, editing, or deleting club members.
-- [x] Admin Dashboard – for managing overall club operations and users.
+- [ ] Member Management Page – for adding, editing, or deleting club members. ![80%](https://progress-bar.xyz/80)
+- [ ] Admin Dashboard – for managing overall club operations and users. ![80%](https://progress-bar.xyz/80)
 - [x] Profile Page – allows users to view and update their personal information.
 
 ### Authentication and Security
@@ -126,7 +126,6 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
 ### Version Control
 - [x] Use Git for version control to manage code changes efficiently.
 - [x] Ensure regular commits with meaningful messages.
-- [ ] Use branching strategies for features and bug fixes. ![80%](https://progress-bar.xyz/80)
 
 ## How to Set Up Locally
 
