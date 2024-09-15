@@ -83,7 +83,7 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
 - **Mobile Responsiveness**: Improving the layout and design to ensure a seamless experience across various screen sizes and devices.
 - **Full HTTPS Integration**: Enhancing security by fully implementing HTTPS protocols to protect user data and secure communication.
 - **Single Server Architecture**: Transitioning to a unified Laravel-hosted architecture, eliminating CORS issues by serving both front-end and back-end from the same domain.
-- **Admin Control Panel Expansion**: Adding more advanced features to the admin dashboard for better management of clubs, members, and system-wide settings.
+- **Admin Control Panel Expansion**: Adding features to the admin dashboard for better management of clubs, members, and system-wide settings.
 - **Design Enhancements**: Refining the overall UI/UX with updated visuals, smoother animations, and more intuitive navigation.
 - **Code Optimization & Refactoring**: Streamlining code to improve performance, readability, and maintainability, ensuring best coding practices are followed.
 
@@ -101,7 +101,7 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
 
 ### Back-End Requirements (PHP Framework)
 - [x] Develop a RESTful API using Laravel to handle CRUD operations for clubs and member records.
-- [ ] Maintainability and readability of code. ![50%](https://progress-bar.dev/50)
+- [ ] Maintainability and readability of code. ![50%](https://progress-bar.xyz/50)
 - [x] Secure authentication and session management using industry best practices (e.g., password hashing, secure token generation).
 - [x] Implement role-based access control to ensure only authorized users can modify club and member information.
 - [x] Validate all user input on both the client-side and server-side to prevent malicious data entry.
@@ -126,7 +126,7 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
 ### Version Control
 - [x] Use Git for version control to manage code changes efficiently.
 - [x] Ensure regular commits with meaningful messages.
-- [ ] Use branching strategies for features and bug fixes. ![80%](https://progress-bar.dev/80)
+- [ ] Use branching strategies for features and bug fixes. ![80%](https://progress-bar.xyz/80)
 
 ## How to Set Up Locally
 
