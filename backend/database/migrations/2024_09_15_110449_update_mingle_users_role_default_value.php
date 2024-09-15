@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('mingle_users', function (Blueprint $table) {
-            $table->string('role')->default(1)->change();
+            $table->integer('role')->default(1)->change();
         });
     }
 
