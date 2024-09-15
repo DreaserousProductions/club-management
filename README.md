@@ -76,7 +76,7 @@ The project was developed using Git, with version control managed through regula
 The project is deployed on AWS.  
 To view the project, please contact:
     - `+91 72000 97169` (WhatsApp)
-    - `naghul.pranav.a.s.4@gmail.com'
+    - `naghul.pranav.a.s.4@gmail.com`
 to request the lab instance to be started. You will be provided a link (Eg: `http:\\100.100.100.100:4200`) to access the site's current version.
 
 ## Under Development
