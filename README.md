@@ -74,10 +74,7 @@ The project was developed using Git, with version control managed through regula
 
 ### Deployment
 The project is deployed on AWS.  
-To view the project, please contact:
-    - `+91 72000 97169` (WhatsApp)
-    - `naghul.pranav.a.s.4@gmail.com`
-to request the lab instance to be started. You will be provided a link (Eg: `http:\\100.100.100.100:4200`) to access the site's current version.
+To view the project, please contact `+91 72000 97169` (WhatsApp) or `naghul.pranav.a.s.4@gmail.com` to request the lab instance to be started. You will be provided a link (Eg: `http:\\100.100.100.100:4200`) to access the site's current version.
 
 ## Under Development
 - **Mobile Responsiveness**: Improving the layout and design to ensure a seamless experience across various screen sizes and devices.
@@ -174,6 +171,6 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
    - Backend: `http://localhost:8000`
 
 ## Contact
-For queries, contact:
-    - `+91 72000 97169` (WhatsApp)
+For queries, contact:  
+    - `+91 72000 97169` (WhatsApp)  
     - `naghul.pranav.a.s.4@gmail.com'
