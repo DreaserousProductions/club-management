@@ -1,5 +1,5 @@
 # MINGLE - Club Management System
-$${\color{red}Mingle}$$
+$${\textnormal{\color{purple}M \color{blue}i \color{green}n \color{orange}g \color{red}l \color{pink}e}}$$
 
 ## Overview
 
