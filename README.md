@@ -1,8 +1,8 @@
-# Club Membership Management System
+# MINGLE - Club Management System
 
 ## Overview
 
-The **Club Membership Management System** is designed to manage various student clubs within a college environment. The system provides functionality for users to register, log in, view clubs, manage members, and perform operations such as joining clubs, editing profiles, and viewing announcements. Admins have access to dashboards for managing club members and making announcements. The project has been built using **Angular** for the front end and **Laravel** for the back end, with **MySQL** for database management.
+The **Club Management System** is designed to manage various student clubs within a college environment. The system provides functionality for users to register, log in, view clubs, manage members, and perform operations such as joining clubs, editing profiles, and viewing announcements. Admins have access to dashboards for managing club members and making announcements. The project has been built using **Angular** for the front end and **Laravel** for the back end, with **MySQL** for database management.
 
 ## Features
 
@@ -61,8 +61,8 @@ The **Club Membership Management System** is designed to manage various student 
 ### Back-End
 - **Laravel with MySQL**  
   The back end is built using Laravel, providing full CRUD support for member operations. 
-  - **Member operations**: Handles adding, updating, deleting, and viewing members.
-  - **Club operations**: Allows admins to manage clubs.
+  - **Member operations**: Handles viewing clubs, joining clubs, viewing announcements, logging in, and registering.
+  - **Club operations**: Allows admins to manage clubs and members. ❌ (Under Development)
   
   The system uses Laravel's ORM for interacting with the MySQL database.
 
@@ -74,7 +74,7 @@ The project was developed using Git, with version control managed through regula
 
 ### Deployment
 The project is deployed on AWS Learner Labs.  
-To view the project, please contact `myemail@gmail.com` to request the lab instance to be started.
+To view the project, please contact `72000 97169`(WhatsApp) `[or]` `naghul.pranav.a.s.4@gmail.com` to request the lab instance to be started. You will be provided a link(`Eg: http:\\100.100.100.100:4200`) to access the site's current version.
 
 ## Known Issues
 - **Mobile Responsiveness**  
