@@ -1,0 +1,53 @@
+.noti {
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    border: 2px solid var(--trn-beige);
+    border-radius: 10px;
+
+    padding: 2px 15px 2px 15px;
+
+    background-color: var(--trn-dark-shade);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.noti .noti-title {
+    display: flex;
+    align-items: end;
+    justify-content: start;
+
+    width: max-content;
+    border-bottom: 1px solid var(--trn-red);
+}
+
+.noti .noti-title .title {
+    color: var(--main-teal);
+    text-shadow: 0 0 5px var(--trn-beige);
+
+    font-family: "Archivo Black";
+    font-size: 24px;
+}
+
+.noti .noti-title .by-who {
+    margin-left: 12px;
+
+    color: var(--trn-teal);
+
+    font-family: "Inconsolata";
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.noti .noti-content {
+    color: var(--main-beige);
+
+    font-family: "Inconsolata";
+    font-size: 16px;
+}

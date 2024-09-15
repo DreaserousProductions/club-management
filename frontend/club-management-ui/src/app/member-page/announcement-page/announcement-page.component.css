@@ -1,0 +1,79 @@
+.ann-div {
+    width: 100%;
+    min-height: 100vh;
+
+    padding-top: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.max-div {
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.ann-div #ann-type {
+    background: var(--trn-dark-shade);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--main-teal);
+
+    font-family: "Inconsolata";
+    font-size: 20px;
+    color: var(--main-red);
+
+    padding: 2px 15px 2px 15px;
+    width: 100%;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+.ann-div #ann-type option {
+    background-color: var(--dark-shade);
+}
+
+.ann-div #ann-type option:hover {
+    background-color: var(--light-shade);
+    color: var(--main-purple);
+}
+
+.ann-div .announcement {
+    background: var(--trn-dark-shade);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--main-teal);
+
+    font-family: "Inconsolata";
+    font-size: 20px;
+    color: var(--main-red);
+
+    padding: 2px 15px 2px 15px;
+    width: 100%;
+    border-radius: 10px;
+
+    resize: none;
+
+    margin-bottom: 20px;
+
+    scrollbar-width: none;
+}
+
+.ann-div .announcement::-webkit-scrollbar {
+    width: none;
+}
+
+.ann-div .max-div .title {
+    margin-top: 40px;
+
+    font-family: "Archivo Black";
+    font-size: 40px;
+    letter-spacing: 5px;
+    color: var(--main-beig);
+}

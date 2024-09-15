@@ -5,7 +5,7 @@ button {
     color: var(--main-teal);
     background-color: var(--main-beige);
     box-shadow: inset -1px 1px 5px #d7a966;
-    text-shadow: 1px 1px 1px #12191b;
+    text-shadow: 1.5px 1px 1px #12191b;
 
     padding: 2px 15px 2px 15px;
     border-radius: 6px;

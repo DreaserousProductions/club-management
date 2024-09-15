@@ -10,24 +10,29 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './nav-panel.component.css'
 })
 export class NavPanelComponent implements AfterViewInit {
-  @Input() firstButtonLink: string = "register";
   @Input() mainButtonLink: string = "register";
   @Input() mainButtonText: string = "Register";
 
   initNavPanel() {
     const nav_logo = document.querySelector(".nav-logo-container .logo img");
     const nav_bg = document.querySelector(".nav-logo-container .logo-bg");
-    nav_logo?.addEventListener('click', () => {
+    const links = document.querySelectorAll(".central-menu-buttons a");
+
+    const toggleNavBar = () => {
       nav_logo?.classList.toggle("active");
       nav_bg?.classList.toggle("active");
       nav_bg?.classList.toggle("rotate");
+    };
+
+    nav_logo?.addEventListener('click', toggleNavBar);
+    links.forEach(link => {
+      link?.addEventListener('click', toggleNavBar);
     });
 
     const isRegistered = localStorage.getItem("mingle-registered");
     const isLoggedIn = localStorage.getItem("mingle-username");
 
     if (isRegistered === "positive" || isLoggedIn) {
-      this.firstButtonLink = "login";
       this.mainButtonLink = "login";
       this.mainButtonText = "Login";
     }
