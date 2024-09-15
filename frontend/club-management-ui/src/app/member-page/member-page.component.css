@@ -38,6 +38,7 @@
 
 .first-row .avatar img {
     max-width: 100px;
+    border-radius: 50%;
 }
 
 .first-row .name {
@@ -59,19 +60,6 @@
 }
 
 /* Temp */
-.avatar {
-    position: relative;
-    display: inline-block;
-}
-
-.avatar img {
-    display: block;
-    width: 100px;
-    /* Adjust size as needed */
-    height: 100px;
-    /* Adjust size as needed */
-}
-
 .avatar i.fas.fa-pen {
     position: absolute;
     left: 50%;
