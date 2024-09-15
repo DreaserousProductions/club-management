@@ -1,5 +1,5 @@
+$${\texttt{\color{white}M \color{purple}i \color{white}n \color{cyan}g \color{white}l \color{white}e}}$$
 # MINGLE - Club Management System
-$${\textnormal{\color{purple}M \color{blue}i \color{green}n \color{orange}g \color{red}l \color{pink}e}}$$
 
 ## Overview
 
