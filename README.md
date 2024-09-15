@@ -87,6 +87,47 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
 - **Design Enhancements**: Refining the overall UI/UX with updated visuals, smoother animations, and more intuitive navigation.
 - **Code Optimization & Refactoring**: Streamlining code to improve performance, readability, and maintainability, ensuring best coding practices are followed.
 
+## Current Progress
+
+### Front-End Requirements (Angular)
+- [x] A responsive user interface that lists all the clubs and their members.
+- [x] Forms to add new clubs and update club details (e.g., name, description, etc.).
+- [x] Member management functionality including adding new members, editing member information, and removing members from the club.
+- [x] Search and filter options to easily locate specific members or clubs.
+- [x] A page for viewing detailed information about a club and its members.
+- [x] User authentication pages for login and registration.
+- [x] Admin dashboard for managing clubs and their members.
+- [x] Role-based access control to differentiate between regular members and club administrators.
+
+### Back-End Requirements (PHP Framework)
+- [x] Develop a RESTful API using Laravel to handle CRUD operations for clubs and member records.
+- [ ] Maintainability and readability of code. ![50%](https://progress-bar.dev/50)
+- [x] Secure authentication and session management using industry best practices (e.g., password hashing, secure token generation).
+- [x] Implement role-based access control to ensure only authorized users can modify club and member information.
+- [x] Validate all user input on both the client-side and server-side to prevent malicious data entry.
+
+### Database Requirements
+- [x] Use MySQL for the database.
+- [x] Implement ORM (Object-Relational Mapping) for interacting with the database.
+
+### Pages Required
+- [x] Login and Registration Pages – for user authentication.
+- [x] Club List Page – displays a list of all clubs with options to add, edit, or delete.
+- [x] Club Detail Page – shows detailed information about a selected club, including member lists.
+- [x] Member Management Page – for adding, editing, or deleting club members.
+- [x] Admin Dashboard – for managing overall club operations and users.
+- [x] Profile Page – allows users to view and update their personal information.
+
+### Authentication and Security
+- [x] Implement proper user authentication (login and logout) and maintain secure user sessions.
+- [x] Ensure all sensitive data is encrypted and protected.
+- [x] Utilize secure coding practices to prevent common vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF).
+
+### Version Control
+- [x] Use Git for version control to manage code changes efficiently.
+- [x] Ensure regular commits with meaningful messages.
+- [ ] Use branching strategies for features and bug fixes. ![80%](https://progress-bar.dev/80)
+
 ## How to Set Up Locally
 
 ### Prerequisites
