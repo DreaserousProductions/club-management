@@ -9,7 +9,7 @@ The **Club Membership Management System** is designed to manage various student 
 ### Front-End
 - **Home Page**  
   A dynamic home page using **3D models** and **GSAP animations**.  
-  _[Attach home page screenshot here]_
+  ![Alt text]("./readme asstes/HomePage.png")
 
 - **Circular Menu Activated Navbar**  
   A responsive circular menu-based navigation bar.  
