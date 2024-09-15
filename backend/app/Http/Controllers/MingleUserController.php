@@ -145,6 +145,7 @@ class MingleUserController extends Controller
         // Return user data (name and avatar path)
         return response()->json([
             'name' => $user->name,
+            'role' => $user-> role,
             'avatar' => $user->avatar_img_path // Make sure this is a URL or path to the avatar image
         ], 200);
     }

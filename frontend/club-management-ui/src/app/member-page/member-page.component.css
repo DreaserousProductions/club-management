@@ -36,9 +36,24 @@
     justify-content: space-around;
 }
 
-.first-row .avatar img {
-    max-width: 100px;
+.first-row .avatar {
+    width: 100px;
+    /* Set a fixed width */
+    height: 100px;
+    /* Set the same height as width to make it a square */
+    overflow: hidden;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-row .avatar img {
+    width: 100%;
+    /* Make the image fill the container */
+    height: 100%;
+    object-fit: cover;
+    /* Crop the image to fit the container */
 }
 
 .first-row .name {

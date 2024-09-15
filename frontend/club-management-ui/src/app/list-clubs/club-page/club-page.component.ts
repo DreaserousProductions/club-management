@@ -11,6 +11,7 @@ import { MingleButtonComponent } from "../../elements/mingle-button/mingle-butto
 })
 export class ClubPageComponent implements OnInit {
   @Input() isButtonDisabled: boolean = false;
+  @Input() buttonText: string = "Join";
 
   constructor(private clubService: ClubService) { }
 
@@ -82,13 +83,19 @@ export class ClubPageComponent implements OnInit {
     this.clubService.joinClub(this.club.id, localStorage.getItem("mingle-username")).subscribe({
       next: (response) => {
         console.log('Successfully joined the club', response);
-        const joinBtn = document.querySelector("#join-club");
-        joinBtn?.classList.add("hidden");
+        this.buttonText = "Requested";
         // Handle success (e.g., show a message to the user)
       },
       error: (error) => {
-        console.error('Error joining the club', error);
-        this.isButtonDisabled = false;
+        if (error.status === 409) {
+          // Handle the 409 Conflict error
+          console.log('Club membership conflict - already joined or other conflict');
+          this.buttonText = "Already Requested";
+        } else {
+          // Handle other errors
+          console.error('Error joining the club', error);
+          this.isButtonDisabled = false;
+        }
       },
       complete: () => {
         console.log('Request completed');

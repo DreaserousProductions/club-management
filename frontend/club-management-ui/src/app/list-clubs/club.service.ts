@@ -46,12 +46,12 @@ export class ClubService {
       'Authorization': `Bearer ${token}`
     });
 
-    return this.http.post<any>(`/join-club`, { club_id: club_id, user_id: user_id }, { headers })
-      .pipe(
-        catchError(error => {
-          console.error('Error joining club', error);
-          return throwError(() => new Error('Error joining club'));
-        })
-      );
+    return this.http.post<any>(`/join-club`, { club_id: club_id, user_id: user_id }, { headers });
+    // .pipe(
+    //   catchError(error => {
+    //     console.error('Error joining club', error);
+    //     return throwError(() => new Error('Error joining club'));
+    //   })
+    // );
   }
 }
