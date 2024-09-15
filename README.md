@@ -1,4 +1,4 @@
-$${\texttt{\color{white}M \color{purple}i \color{white}n \color{cyan}g \color{white}l \color{white}e}}$$
+# $${\texttt{\color{pink}M \color{purple}i \color{pink}n \color{cyan}g \color{pink}l \color{pink}e}}$$
 # MINGLE - Club Management System
 
 ## Overview
