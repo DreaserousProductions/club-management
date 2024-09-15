@@ -8,7 +8,7 @@ The **Club Management System** is designed to manage various student clubs withi
 
 ### Front-End
 - **Home Page**  
-  A dynamic home page using **3D models** and **GSAP animations**.\
+  A dynamic home page using **3D models** and **GSAP animations**.
 
   ![HomePage](./readme_assets/HomePage.png)
 
