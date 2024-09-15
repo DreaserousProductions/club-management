@@ -1,11 +1,10 @@
-import { Component, OnInit, QueryList } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { ClubItemComponent } from './club-item/club-item.component';
 import { TitleCardComponent } from "./title-card/title-card.component";
 import { ListMembersComponent } from "./list-members/list-members.component";
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-clubs',
@@ -14,6 +13,7 @@ import { Router } from '@angular/router';
   templateUrl: './list-clubs.component.html',
   styleUrl: './list-clubs.component.css'
 })
+
 export class ListClubsComponent implements OnInit {
 
   private apiUrl = '/get-clubs';
@@ -21,7 +21,7 @@ export class ListClubsComponent implements OnInit {
   private listOfClubs: any[] = [];
   public displayData: any[] = [];
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.loadClubs();
@@ -63,6 +63,6 @@ export class ListClubsComponent implements OnInit {
   }
 
   onClubItemClick(clubId: number): void {
-    this.router.navigate(['/club_page'], { queryParams: { index: clubId } });
+    window.location.href = `/club_page?index=${clubId}`;
   }
 }
