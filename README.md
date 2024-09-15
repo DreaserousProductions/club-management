@@ -73,12 +73,19 @@ The **Club Management System** is designed to manage various student clubs withi
 The project was developed using Git, with version control managed through regular commits and branches for feature development.
 
 ### Deployment
-The project is deployed on AWS Learner Labs.  
-To view the project, please contact `72000 97169`(WhatsApp) `[or]` `naghul.pranav.a.s.4@gmail.com` to request the lab instance to be started. You will be provided a link(`Eg: http:\\100.100.100.100:4200`) to access the site's current version.
+The project is deployed on AWS.  
+To view the project, please contact:
+    - `+91 72000 97169` (WhatsApp)
+    - `naghul.pranav.a.s.4@gmail.com'
+to request the lab instance to be started. You will be provided a link (Eg: `http:\\100.100.100.100:4200`) to access the site's current version.
 
-## Known Issues
-- **Mobile Responsiveness**  
-  Mobile responsiveness requires further optimization to ensure a better experience on smaller devices.
+## Under Development
+- **Mobile Responsiveness**: Improving the layout and design to ensure a seamless experience across various screen sizes and devices.
+- **Full HTTPS Integration**: Enhancing security by fully implementing HTTPS protocols to protect user data and secure communication.
+- **Single Server Architecture**: Transitioning to a unified Laravel-hosted architecture, eliminating CORS issues by serving both front-end and back-end from the same domain.
+- **Admin Control Panel Expansion**: Adding more advanced features to the admin dashboard for better management of clubs, members, and system-wide settings.
+- **Design Enhancements**: Refining the overall UI/UX with updated visuals, smoother animations, and more intuitive navigation.
+- **Code Optimization & Refactoring**: Streamlining code to improve performance, readability, and maintainability, ensuring best coding practices are followed.
 
 ## How to Set Up Locally
 
@@ -91,7 +98,7 @@ To view the project, please contact `72000 97169`(WhatsApp) `[or]` `naghul.prana
 1. **Clone the Repository**
    ```bash
    git clone <repository-link>
-   cd club-membership-management-system
+   cd club-management
    ```
 
 2. **Front-End (Angular Setup)**
@@ -127,4 +134,6 @@ To view the project, please contact `72000 97169`(WhatsApp) `[or]` `naghul.prana
    - Backend: `http://localhost:8000`
 
 ## Contact
-For queries, contact `myemail@gmail.com`.
+For queries, contact:
+    - `+91 72000 97169` (WhatsApp)
+    - `naghul.pranav.a.s.4@gmail.com'
