@@ -123,6 +123,7 @@ export class MemberPageComponent implements OnInit {
         this.userName = response.name;
         this.avatarUrl = `storage/${response.avatar}`;
         localStorage.setItem('mingle-role', response.role);
+        console.log(response);
       },
       error: (error) => {
         console.error('Error loading profile:', error);

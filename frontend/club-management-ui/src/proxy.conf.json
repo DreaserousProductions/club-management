@@ -1,60 +1,60 @@
 {
     "/otp/send": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/otp/verify": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/user/create-password": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/user/login": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/get-clubs": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/get-club": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/join-club": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/update-profile": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/retrieve-profile": {
-        "target": "http://44.213.117.181:8000/api",
+        "target": "http://3.235.89.82:8000/api",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
     },
     "/storage": {
-        "target": "http://44.213.117.181:8000",
+        "target": "http://3.235.89.82:8000",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
