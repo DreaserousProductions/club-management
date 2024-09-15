@@ -96,8 +96,8 @@ to request the lab instance to be started. You will be provided a link (Eg: `htt
 - [ ] Search and filter options to easily locate specific members or clubs. ![10%](https://progress-bar.xyz/10)
 - [x] A page for viewing detailed information about a club and its members.
 - [x] User authentication pages for login and registration.
-- [x] Admin dashboard for managing clubs and their members. ![60%](https://progress-bar.xyz/60)
-- [ ] Role-based access control to differentiate between regular members and club administrators.
+- [ ] Admin dashboard for managing clubs and their members. ![60%](https://progress-bar.xyz/60)
+- [c] Role-based access control to differentiate between regular members and club administrators.
 
 ### Back-End Requirements (PHP Framework)
 - [x] Develop a RESTful API using Laravel to handle CRUD operations for clubs and member records.
