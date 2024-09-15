@@ -8,41 +8,55 @@ The **Club Membership Management System** is designed to manage various student 
 
 ### Front-End
 - **Home Page**  
-  A dynamic home page using **3D models** and **GSAP animations**.  
-  ![Alt text](./readme_assets/HomePage.png)
+  A dynamic home page using **3D models** and **GSAP animations**.\
+
+  ![HomePage](./readme_assets/HomePage.png)
 
 - **Circular Menu Activated Navbar**  
   A responsive circular menu-based navigation bar.  
-  _[Attach navbar screenshot here]_
+
+  ![NavBar](./readme_assets/NavBar.png)
 
 - **Registration with OTP Verification**  
   Users can register through their college email, with OTP-based verification.  
-  _[Attach registration screenshot here]_
+
+  ![RegistrationPage](./readme_assets/Registration.png)
 
 - **Login with JWT Authentication and Role-Based Security**  
   Login functionality secured with JWT-based role authentication (users/admins).  
-  _[Attach login page screenshot here]_
+  
+  ![LoginPage](./readme_assets/Login.png)
 
 - **User Profile Page**  
   Allows users to view and update their personal details.  
-  _[Attach user profile page screenshot here]_
+
+  ![UserProfilePage](./readme_assets/UserProfile.png)
 
 - **Club Listing and Detailed Club Page**  
   Displays a list of all clubs and provides the option to request membership.  
-  Each club has a detailed page showing member lists and more information.  
-  _[Attach club listing and club details screenshots here]_
+  Each club has a detailed page showing member lists and more information. 
+
+  ![ClubListing](./readme_assets/ClubList.png)
+  
+  ![ClubDetails](./readme_assets/ClubDetails.png)
 
 - **Announcements Page**  
   Admins can post announcements, and all users can view them.  
-  _[Attach announcements page screenshot here]_
+
+  ![AnnouncementsPage](./readme_assets/Announcements.png)
 
 - **Admin Dashboard**  
   A dashboard for admins to manage clubs, members, and announcements.  
-  _[Attach admin dashboard screenshot here]_
+
+  ![AdminDashboardPage](./readme_assets/AdminDasboard.png)
 
 - **Admin Club and Member Controls**  
   Admin functionality to manage clubs and members.  
-  _[Attach admin club controls and admin member controls screenshots here]_
+
+  ![AdminClubPage](./readme_assets/AdminClub.png)
+
+  ![AdminMemberPage](./readme_assets/AdminMember.png)
+
 
 ### Back-End
 - **Laravel with MySQL**  
