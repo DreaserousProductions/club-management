@@ -48,7 +48,7 @@ The **Club Membership Management System** is designed to manage various student 
 - **Admin Dashboard**  
   A dashboard for admins to manage clubs, members, and announcements.  
 
-  ![AdminDashboardPage](./readme_assets/AdminDasboard.png)
+  ![AdminDashboardPage](./readme_assets/AdminDashboard.png)
 
 - **Admin Club and Member Controls**  
   Admin functionality to manage clubs and members.  
