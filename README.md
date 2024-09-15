@@ -173,4 +173,4 @@ To view the project, please contact `+91 72000 97169` (WhatsApp) or `naghul.pran
 ## Contact
 For queries, contact:  
     - `+91 72000 97169` (WhatsApp)  
-    - `naghul.pranav.a.s.4@gmail.com'
+    - `naghul.pranav.a.s.4@gmail.com`
