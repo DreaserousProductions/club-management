@@ -1,4 +1,4 @@
-# $${\texttt{\color{pink}M \color{purple}i \color{red}n \color{cyan}g \color{pink}l \color{pink}e}}$$
+# $${\texttt{\color{white}M \color{red}i \color{white}n \color{cyan}g \color{white}l \color{white}e}}$$
 
 ## Overview - Club Management System
 
