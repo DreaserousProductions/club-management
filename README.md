@@ -1,4 +1,5 @@
 # MINGLE - Club Management System
+$${\color{red}Mingle}$$
 
 ## Overview
 
