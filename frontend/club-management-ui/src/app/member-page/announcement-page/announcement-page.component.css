@@ -65,15 +65,21 @@
     scrollbar-width: none;
 }
 
+.ann-div .max-div .ann-btn {
+    margin-bottom: 40px;
+}
+
 .ann-div .announcement::-webkit-scrollbar {
     width: none;
 }
 
 .ann-div .max-div .title {
-    margin-top: 40px;
-
     font-family: "Archivo Black";
     font-size: 40px;
     letter-spacing: 5px;
     color: var(--main-beig);
+}
+
+.hidden {
+    display: none;
 }

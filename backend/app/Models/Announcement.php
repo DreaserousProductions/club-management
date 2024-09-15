@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Announcement extends Model
 {
     use HasFactory;
+
+    protected $table = 'announcements'; // Explicitly define the table name if it doesn't follow Laravel's convention
+
+    protected $fillable = [
+        'author_name',
+        'club_id',
+        'title',
+        'content',
+    ];
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './notification.component.css'
 })
 export class NotificationComponent {
-
+  @Input() ann_title: string = "";
+  @Input() ann_auth: string = "";
+  @Input() ann_content: string = "";
 }
