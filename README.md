@@ -1,6 +1,6 @@
 # $${\texttt{\color{white}M \color{red}i \color{white}n \color{cyan}g \color{white}l \color{white}e}}$$
 
-## Overview - Club Management System
+## Club Management System
 
 The **Club Management System** is designed to manage various student clubs within a college environment. The system provides functionality for users to register, log in, view clubs, manage members, and perform operations such as joining clubs, editing profiles, and viewing announcements. Admins have access to dashboards for managing club members and making announcements. The project has been built using **Angular** for the front end and **Laravel** for the back end, with **MySQL** for database management.
 
